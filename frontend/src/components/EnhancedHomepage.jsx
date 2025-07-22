@@ -127,12 +127,10 @@ const EnhancedHomepage = () => {
           )}
         </div>
 
-        {/* Right Side - Video Carousel */}
-        <div className="w-full lg:w-1/2 bg-gray-900 flex flex-col justify-center items-center px-6 sm:px-12 lg:px-16 py-16 lg:py-0 relative group">
+        {/* Right Side - Full Video Carousel Overlay */}
+        <div className="w-full lg:w-1/2 relative overflow-hidden">
           <ScrollAnimations animation="slideInRight" delay={800}>
-            <div className="w-full max-w-lg h-[400px] sm:h-[500px] lg:h-[600px] relative">
-              <VideoCarousel />
-            </div>
+            <VideoCarousel />
           </ScrollAnimations>
         </div>
       </div>
