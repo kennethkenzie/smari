@@ -5,20 +5,10 @@ const Footer = () => {
   return (
     <footer className="relative mt-32">
       {/* Main Footer Section */}
-      <div className="flex flex-col lg:flex-row min-h-[60vh] lg:min-h-[70vh]">
+      <div className="flex flex-col lg:flex-row min-h-[40vh] lg:min-h-[50vh]">
         {/* Left Footer - Red Side */}
         <div className="w-full lg:w-1/2 bg-metadesign-red px-8 lg:px-16 py-16 lg:py-24 flex flex-col">
           <div className="flex-1 space-y-12">
-            {/* Footer Logo and Description */}
-            <div className="space-y-8">
-              <h2 className="text-white text-4xl lg:text-6xl font-light leading-tight">
-                Let's create something extraordinary together
-              </h2>
-              <p className="text-white/90 text-lg lg:text-xl font-light leading-relaxed max-w-xl">
-                Ready to transform your brand? We're here to help you make your business the best it can be.
-              </p>
-            </div>
-
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
@@ -73,41 +63,6 @@ const Footer = () => {
         {/* Right Footer - Black Side */}
         <div className="w-full lg:w-1/2 bg-black px-8 lg:px-16 py-16 lg:py-24 flex flex-col">
           <div className="flex-1 space-y-12">
-            {/* Services */}
-            <div>
-              <h3 className="text-white text-2xl font-light mb-8">Our Services</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="space-y-6">
-                  <div className="group">
-                    <h4 className="text-white text-lg font-medium mb-2 group-hover:text-metadesign-red transition-colors duration-300">Brand Strategy</h4>
-                    <p className="text-white/70 text-sm">Strategic positioning and brand architecture</p>
-                  </div>
-                  <div className="group">
-                    <h4 className="text-white text-lg font-medium mb-2 group-hover:text-metadesign-red transition-colors duration-300">Visual Identity</h4>
-                    <p className="text-white/70 text-sm">Logo design and brand systems</p>
-                  </div>
-                  <div className="group">
-                    <h4 className="text-white text-lg font-medium mb-2 group-hover:text-metadesign-red transition-colors duration-300">Digital Design</h4>
-                    <p className="text-white/70 text-sm">Websites and digital experiences</p>
-                  </div>
-                </div>
-                <div className="space-y-6">
-                  <div className="group">
-                    <h4 className="text-white text-lg font-medium mb-2 group-hover:text-metadesign-red transition-colors duration-300">Brand Management</h4>
-                    <p className="text-white/70 text-sm">Ongoing brand guidance and support</p>
-                  </div>
-                  <div className="group">
-                    <h4 className="text-white text-lg font-medium mb-2 group-hover:text-metadesign-red transition-colors duration-300">Innovation</h4>
-                    <p className="text-white/70 text-sm">Future-forward solutions</p>
-                  </div>
-                  <div className="group">
-                    <h4 className="text-white text-lg font-medium mb-2 group-hover:text-metadesign-red transition-colors duration-300">Consulting</h4>
-                    <p className="text-white/70 text-sm">Strategic business consulting</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Global Offices */}
             <div>
               <h3 className="text-white text-2xl font-light mb-6">Global Offices</h3>
