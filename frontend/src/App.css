@@ -2,37 +2,65 @@
     text-align: center;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* MetaDesign Clone Styles */
+.metadesign-container {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 300;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Smooth transitions for all interactive elements */
+* {
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
 }
 
-.App-link {
-    color: #61dafb;
+/* Ensure full viewport height */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Hide scroll bars while keeping scrollability */
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Custom animation for side panels */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Typography scaling for responsive design */
+@media (max-width: 1024px) {
+  .responsive-text-7xl {
+    font-size: 3.5rem;
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive-text-7xl {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
 }
