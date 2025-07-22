@@ -10,15 +10,34 @@ const CustomCursor = () => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
+    const isInteractiveElement = (element) => {
+      if (!element) return false;
+      
+      // Check element type
+      const tagName = element.tagName?.toLowerCase();
+      if (tagName === 'button' || tagName === 'a') return true;
+      
+      // Check for cursor-pointer class
+      if (element.classList?.contains('cursor-pointer')) return true;
+      
+      // Check for data-cursor attribute
+      if (element.dataset?.cursor) return true;
+      
+      // Check if element has onclick or is clickable
+      if (element.onclick || element.style?.cursor === 'pointer') return true;
+      
+      return false;
+    };
+
     const handleMouseEnter = (e) => {
-      if (e.target.matches('button, a, .cursor-pointer')) {
+      if (isInteractiveElement(e.target)) {
         setIsHovering(true);
-        setCursorType(e.target.dataset.cursor || 'hover');
+        setCursorType(e.target.dataset?.cursor || 'hover');
       }
     };
 
     const handleMouseLeave = (e) => {
-      if (e.target.matches('button, a, .cursor-pointer')) {
+      if (isInteractiveElement(e.target)) {
         setIsHovering(false);
         setCursorType('default');
       }
