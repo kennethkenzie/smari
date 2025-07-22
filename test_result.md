@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Comprehensive testing of the MetaDesign clone frontend application at http://localhost:3000. Test all interactive elements and functionality including navigation, split-screen layout, side panels, footer, responsive design, hover effects, typography, page navigation, language dropdown, visual design verification, and error testing."
+user_problem_statement: "Fix the video carousel overlay issue where the background wasn't loading properly and ensure the video carousel functions correctly as a full overlay covering the entire right section of the homepage. The previous implementation had the video carousel wrapped in ScrollAnimations which prevented proper display."
 
 frontend:
   - task: "Navigation Bar Functionality"
