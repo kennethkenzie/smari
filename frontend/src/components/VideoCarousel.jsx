@@ -67,99 +67,100 @@ const VideoCarousel = () => {
   };
 
   return (
-    <div className="relative w-full h-full flex flex-col">
-      {/* Main Video Display */}
-      <div className="relative flex-1 overflow-hidden rounded-lg group">
-        <div 
-          className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out"
-          style={{ backgroundImage: `url(${videos[currentVideo].thumbnail})` }}
-        >
-          {/* Video Overlay */}
-          <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:bg-black/20"></div>
-          
-          {/* Play Button */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <button
-              onClick={togglePlay}
-              className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transform transition-all duration-300 hover:scale-110 hover:bg-white/30 group-hover:opacity-100"
-              data-cursor="red"
-            >
-              {isPlaying ? (
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-                </svg>
-              ) : (
-                <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              )}
-            </button>
-          </div>
-
-          {/* Video Info */}
-          <div className="absolute bottom-6 left-6 right-6 text-white transform transition-all duration-500 translate-y-0 group-hover:translate-y-0">
-            <div className="space-y-2">
-              <h3 className="text-2xl lg:text-3xl font-light leading-tight">
-                {videos[currentVideo].title}
-              </h3>
-              <p className="text-white/80 text-lg font-light leading-relaxed max-w-md">
-                {videos[currentVideo].description}
-              </p>
-              <div className="flex items-center space-x-4 mt-4">
-                <span className="text-sm text-white/60">{videos[currentVideo].duration}</span>
-                <span className="text-sm text-white/60">•</span>
-                <span className="text-sm text-white/60">HD Quality</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Navigation Arrows */}
+    <div className="absolute inset-0 w-full h-full overflow-hidden">
+      {/* Full Background Video Display */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out group"
+        style={{ backgroundImage: `url(${videos[currentVideo].thumbnail})` }}
+      >
+        {/* Video Overlay */}
+        <div className="absolute inset-0 bg-black/50 transition-opacity duration-300 group-hover:bg-black/30"></div>
+        
+        {/* Play Button - Center */}
+        <div className="absolute inset-0 flex items-center justify-center">
           <button
-            onClick={prevVideo}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white/30 hover:scale-110"
+            onClick={togglePlay}
+            className="w-24 h-24 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center transform transition-all duration-300 hover:scale-110 hover:bg-white/20 group-hover:opacity-100"
             data-cursor="red"
           >
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-
-          <button
-            onClick={nextVideo}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white/30 hover:scale-110"
-            data-cursor="red"
-          >
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            {isPlaying ? (
+              <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+              </svg>
+            ) : (
+              <svg className="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            )}
           </button>
         </div>
+
+        {/* Video Info - Bottom Left */}
+        <div className="absolute bottom-8 left-8 right-8 text-white transform transition-all duration-500">
+          <div className="space-y-3">
+            <h3 className="text-3xl lg:text-4xl font-light leading-tight">
+              {videos[currentVideo].title}
+            </h3>
+            <p className="text-white/90 text-xl font-light leading-relaxed max-w-lg">
+              {videos[currentVideo].description}
+            </p>
+            <div className="flex items-center space-x-4 mt-6">
+              <span className="text-white/70 text-base">{videos[currentVideo].duration}</span>
+              <span className="text-white/70">•</span>
+              <span className="text-white/70 text-base">HD Quality</span>
+              <span className="text-white/70">•</span>
+              <span className="text-white/70 text-base uppercase tracking-wider">Our Work</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Navigation Arrows */}
+        <button
+          onClick={prevVideo}
+          className="absolute left-6 top-1/2 transform -translate-y-1/2 w-14 h-14 bg-black/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-black/40 hover:scale-110"
+          data-cursor="red"
+        >
+          <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <button
+          onClick={nextVideo}
+          className="absolute right-6 top-1/2 transform -translate-y-1/2 w-14 h-14 bg-black/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-black/40 hover:scale-110"
+          data-cursor="red"
+        >
+          <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
       </div>
 
-      {/* Navigation Dots */}
-      <div className="flex items-center justify-center space-x-3 mt-6 px-6">
+      {/* Navigation Dots - Bottom Center */}
+      <div className="absolute bottom-8 left-0 right-0 flex items-center justify-center space-x-4">
         {videos.map((_, index) => (
           <button
             key={index}
             onClick={() => goToVideo(index)}
             className={`relative overflow-hidden transition-all duration-300 rounded-full ${
               index === currentVideo 
-                ? 'w-12 h-3 bg-metadesign-red' 
-                : 'w-3 h-3 bg-white/30 hover:bg-white/50'
+                ? 'w-16 h-4 bg-metadesign-red shadow-lg' 
+                : 'w-4 h-4 bg-white/30 hover:bg-white/60'
             }`}
             data-cursor="red"
           >
             {index === currentVideo && (
-              <div className="absolute inset-0 bg-white/30 animate-pulse"></div>
+              <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
             )}
           </button>
         ))}
       </div>
 
-      {/* Video Counter */}
-      <div className="flex items-center justify-between mt-4 px-6 text-white/60 text-sm">
-        <span>{String(currentVideo + 1).padStart(2, '0')} / {String(videos.length).padStart(2, '0')}</span>
-        <span className="uppercase tracking-wider font-light">Our Work</span>
+      {/* Video Counter - Bottom Right */}
+      <div className="absolute bottom-8 right-8 text-white/80 text-base font-light">
+        <div className="bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full">
+          {String(currentVideo + 1).padStart(2, '0')} / {String(videos.length).padStart(2, '0')}
+        </div>
       </div>
     </div>
   );
