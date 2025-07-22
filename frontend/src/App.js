@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
@@ -117,10 +117,23 @@ const MetaTalks = () => (
 );
 
 function App() {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDevice = () => {
+      setIsDesktop(window.innerWidth >= 768 && !('ontouchstart' in window));
+    };
+
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+
+    return () => window.removeEventListener('resize', checkDevice);
+  }, []);
+
   return (
-    <div className="App relative">
+    <div className={`App relative ${isDesktop ? 'custom-cursor-enabled' : ''}`}>
       <BrowserRouter>
-        <CustomCursor />
+        {isDesktop && <CustomCursor />}
         <Navigation />
         <Routes>
           <Route path="/" element={<EnhancedHomepage />} />
