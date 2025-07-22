@@ -21,7 +21,7 @@ const Navigation = () => {
     { name: 'Offices', path: '/offices' },
     { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact' },
-    { name: 'MetaTalks', path: '/metatalks' },
+    { name: 'Blog', path: '/blog' },
   ];
 
   return (
@@ -35,7 +35,7 @@ const Navigation = () => {
           className="text-white text-2xl sm:text-3xl font-light tracking-wider hover:opacity-80 transition-all duration-300 transform hover:scale-105 z-50"
           data-cursor="red"
         >
-          MetaDesign
+          Smari Creatives
         </Link>
 
         {/* Main Navigation - Desktop */}
