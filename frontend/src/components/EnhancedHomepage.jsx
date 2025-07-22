@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollAnimations from './ScrollAnimations';
 import TypewriterEffect from './TypewriterEffect';
+import VideoCarousel from './VideoCarousel';
 
 const EnhancedHomepage = () => {
   const [showAbout, setShowAbout] = useState(false);
@@ -92,12 +93,12 @@ const EnhancedHomepage = () => {
               <h1 className="text-white text-4xl sm:text-5xl lg:text-7xl font-light leading-tight mb-8 lg:mb-12 overflow-hidden">
                 {typewriterStarted ? (
                   <TypewriterEffect
-                    text="We make businesses the best they can be"
+                    text="We create bold brands that make an impact"
                     delay={50}
                     className="inline-block"
                   />
                 ) : (
-                  <span className="opacity-0">We make businesses the best they can be</span>
+                  <span className="opacity-0">We create bold brands that make an impact</span>
                 )}
               </h1>
               
@@ -126,74 +127,13 @@ const EnhancedHomepage = () => {
           )}
         </div>
 
-        {/* Right Side - Black */}
-        <div className="w-full lg:w-1/2 bg-black flex flex-col justify-center items-start px-6 sm:px-12 lg:px-16 py-16 lg:py-0 relative group overflow-hidden">
-          {/* Parallax Background Effect - Desktop Only */}
-          {!isMobile && (
-            <div 
-              className="absolute inset-0 opacity-5 transition-transform duration-1000"
-              style={{
-                transform: `translate(${mousePosition.x * 0.03}px, ${mousePosition.y * 0.03}px) scale(1.05)`,
-                background: 'linear-gradient(45deg, rgba(242,2,28,0.1) 0%, transparent 50%)',
-              }}
-            />
-          )}
-
+        {/* Right Side - Video Carousel */}
+        <div className="w-full lg:w-1/2 bg-gray-900 flex flex-col justify-center items-center px-6 sm:px-12 lg:px-16 py-16 lg:py-0 relative group">
           <ScrollAnimations animation="slideInRight" delay={800}>
-            <div className="max-w-lg relative z-20">
-              <h2 className="text-white text-4xl sm:text-5xl lg:text-7xl font-light leading-tight mb-6 lg:mb-8">
-                Creativity with the power to transform
-              </h2>
-              
-              <ScrollAnimations animation="fadeInUp" delay={1200}>
-                <div className="flex items-center mb-8 lg:mb-12 group cursor-pointer" data-cursor="red">
-                  <span className="text-white text-sm sm:text-lg font-light tracking-widest uppercase transition-all duration-300 group-hover:tracking-[0.2em]">
-                    OUR WORK
-                  </span>
-                  <div className="ml-4 lg:ml-6 h-px bg-white w-12 lg:w-16 transition-all duration-500 group-hover:w-16 lg:group-hover:w-24"></div>
-                  <div className="ml-2 transform transition-transform duration-300 group-hover:translate-x-2">
-                    <svg className="w-3 h-3 lg:w-4 lg:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </div>
-              </ScrollAnimations>
-              
-              {/* Enhanced Case Study */}
-              <ScrollAnimations animation="fadeInUp" delay={1500}>
-                <div className="mt-12 lg:mt-16 group cursor-pointer transform transition-all duration-500 hover:translate-x-4" data-cursor="red">
-                  <div className="relative overflow-hidden">
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 lg:p-6 border border-white/10 rounded-lg bg-white/5 backdrop-blur-sm transition-all duration-300 group-hover:bg-white/10 group-hover:border-metadesign-red/50">
-                      <div className="mb-4 sm:mb-0">
-                        <span className="text-white text-xl lg:text-2xl font-light mb-2 block">Cencora</span>
-                        <span className="text-white/70 text-sm group-hover:text-white transition-colors duration-300">
-                          Healthcare Brand Transformation
-                        </span>
-                      </div>
-                      <div className="flex items-center text-metadesign-red">
-                        <span className="text-sm font-light mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          View Case
-                        </span>
-                        <div className="transform transition-transform duration-300 group-hover:translate-x-2">
-                          <svg className="w-4 lg:w-5 h-4 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </ScrollAnimations>
+            <div className="w-full max-w-lg h-[400px] sm:h-[500px] lg:h-[600px] relative">
+              <VideoCarousel />
             </div>
           </ScrollAnimations>
-
-          {/* Floating Geometric Elements - Desktop Only */}
-          {!isMobile && (
-            <>
-              <div className="absolute top-1/3 left-10 w-6 h-6 border border-metadesign-red/30 animate-pulse"></div>
-              <div className="absolute bottom-1/4 left-16 w-1 h-1 bg-metadesign-red rounded-full animate-ping"></div>
-            </>
-          )}
         </div>
       </div>
 
@@ -221,7 +161,7 @@ const EnhancedHomepage = () => {
           <div className="fixed right-0 top-1/2 transform -translate-y-1/2 z-40">
             <button 
               onClick={() => openPanel('work')}
-              className="group bg-black text-white px-6 lg:px-8 py-3 lg:py-4 transform rotate-90 origin-right hover:bg-gray-800 transition-all duration-500 font-light text-base lg:text-lg tracking-wider hover:scale-105 hover:shadow-2xl border border-white/20"
+              className="group bg-gray-900 text-white px-6 lg:px-8 py-3 lg:py-4 transform rotate-90 origin-right hover:bg-gray-800 transition-all duration-500 font-light text-base lg:text-lg tracking-wider hover:scale-105 hover:shadow-2xl border border-white/20"
               style={{ transformOrigin: 'right center' }}
               data-cursor="red"
             >
@@ -250,7 +190,7 @@ const EnhancedHomepage = () => {
             </button>
             <button 
               onClick={() => openPanel('work')}
-              className="bg-black text-white px-6 py-3 rounded-full font-light text-sm tracking-wider hover:bg-gray-800 transition-all duration-300 border border-white/20 shadow-lg"
+              className="bg-gray-900 text-white px-6 py-3 rounded-full font-light text-sm tracking-wider hover:bg-gray-800 transition-all duration-300 border border-white/20 shadow-lg"
             >
               Our Work
             </button>
@@ -281,18 +221,18 @@ const EnhancedHomepage = () => {
           {showAbout && (
             <>
               <div className="animate-fadeInUp" style={{ animationDelay: '200ms' }}>
-                <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-light mb-6 lg:mb-8">About MetaDesign</h2>
+                <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-light mb-6 lg:mb-8">About Smari Creatives</h2>
               </div>
               
               <div className="text-white text-lg sm:text-xl font-light leading-relaxed space-y-6">
                 <div className="animate-fadeInUp" style={{ animationDelay: '400ms' }}>
-                  <p>We are a creative brand consultancy. We've been collaborating with leading organizations to solve brand and business challenges since 1979.</p>
+                  <p>We are a creative agency specializing in bold brand experiences that make a lasting impact. Our team combines strategic thinking with innovative design to help brands stand out in today's competitive landscape.</p>
                 </div>
                 <div className="animate-fadeInUp" style={{ animationDelay: '600ms' }}>
-                  <p>Our approach combines strategic thinking with creative excellence to create meaningful connections between brands and people.</p>
+                  <p>From brand identity to digital campaigns, we craft compelling narratives that resonate with audiences and drive meaningful engagement.</p>
                 </div>
                 <div className="animate-fadeInUp" style={{ animationDelay: '800ms' }}>
-                  <p>From brand strategy to digital experiences, we help businesses become the best they can be.</p>
+                  <p>Let's create something extraordinary together and make your brand the best it can be.</p>
                 </div>
               </div>
               
@@ -316,7 +256,7 @@ const EnhancedHomepage = () => {
       </div>
 
       {/* Work Panel */}
-      <div className={`fixed inset-y-0 right-0 w-full lg:w-1/2 bg-black transform transition-all duration-700 ease-out z-30 ${
+      <div className={`fixed inset-y-0 right-0 w-full lg:w-1/2 bg-gray-900 transform transition-all duration-700 ease-out z-30 ${
         showWork ? 'translate-x-0 shadow-2xl' : 'translate-x-full'
       }`}>
         <div className="flex flex-col h-full p-6 sm:p-12 lg:p-16 pt-24 lg:pt-32 relative overflow-hidden overflow-y-auto">
@@ -342,16 +282,16 @@ const EnhancedHomepage = () => {
               
               <div className="text-white text-lg sm:text-xl font-light leading-relaxed space-y-6 lg:space-y-8">
                 <div className="animate-fadeInUp border-l-2 border-metadesign-red pl-6 py-4 transition-all duration-300 hover:border-l-4 hover:pl-8" style={{ animationDelay: '400ms' }}>
-                  <h3 className="text-xl lg:text-2xl mb-2">Cencora</h3>
-                  <p className="opacity-80">Brand transformation for a leading healthcare company</p>
+                  <h3 className="text-xl lg:text-2xl mb-2">Brand Identity Design</h3>
+                  <p className="opacity-80">Creating memorable brand experiences that resonate with your audience</p>
                 </div>
                 <div className="animate-fadeInUp border-l-2 border-gray-600 pl-6 py-4 transition-all duration-300 hover:border-metadesign-red hover:border-l-4 hover:pl-8" style={{ animationDelay: '600ms' }}>
-                  <h3 className="text-xl lg:text-2xl mb-2">Deutsche Telekom</h3>
-                  <p className="opacity-80">Digital brand experience redesign</p>
+                  <h3 className="text-xl lg:text-2xl mb-2">Digital Campaigns</h3>
+                  <p className="opacity-80">Strategic campaigns that drive engagement and conversion</p>
                 </div>
                 <div className="animate-fadeInUp border-l-2 border-gray-600 pl-6 py-4 transition-all duration-300 hover:border-metadesign-red hover:border-l-4 hover:pl-8" style={{ animationDelay: '800ms' }}>
-                  <h3 className="text-xl lg:text-2xl mb-2">Volkswagen</h3>
-                  <p className="opacity-80">Brand strategy and identity development</p>
+                  <h3 className="text-xl lg:text-2xl mb-2">Creative Strategy</h3>
+                  <p className="opacity-80">Innovative strategies that set your brand apart</p>
                 </div>
               </div>
               
