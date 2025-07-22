@@ -12,10 +12,10 @@ const About = () => (
   <PageTransition>
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 pt-32 px-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-6xl font-light text-gray-900 mb-8 animate-fadeInUp">About Page</h1>
+        <h1 className="text-6xl font-light text-gray-900 mb-8 animate-fadeInUp">About Smari Creatives</h1>
         <div className="space-y-6 animate-fadeInUp" style={{ animationDelay: '200ms' }}>
           <p className="text-xl text-gray-600 leading-relaxed">
-            This is where the full About page content would be displayed with rich animations and interactions.
+            We are a bold creative agency specializing in brand experiences that make a lasting impact.
           </p>
           <p className="text-lg text-gray-500">
             Enhanced with smooth page transitions and scroll animations.
@@ -30,10 +30,10 @@ const Work = () => (
   <PageTransition>
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 pt-32 px-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-6xl font-light text-gray-900 mb-8 animate-fadeInUp">Work Page</h1>
+        <h1 className="text-6xl font-light text-gray-900 mb-8 animate-fadeInUp">Our Work</h1>
         <div className="space-y-6 animate-fadeInUp" style={{ animationDelay: '200ms' }}>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Portfolio and case studies would be showcased here with interactive galleries.
+            Creative projects and brand campaigns that drive results and make an impact.
           </p>
           <p className="text-lg text-gray-500">
             Coming soon with advanced hover effects and project showcases.
@@ -48,10 +48,10 @@ const Offices = () => (
   <PageTransition>
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 pt-32 px-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-6xl font-light text-gray-900 mb-8 animate-fadeInUp">Offices Page</h1>
+        <h1 className="text-6xl font-light text-gray-900 mb-8 animate-fadeInUp">Our Offices</h1>
         <div className="space-y-6 animate-fadeInUp" style={{ animationDelay: '200ms' }}>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Global office locations with interactive maps and contact information.
+            Global locations in New York, London, Dubai, and Tokyo.
           </p>
           <p className="text-lg text-gray-500">
             Enhanced with location animations and contact forms.
@@ -66,10 +66,10 @@ const Careers = () => (
   <PageTransition>
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 pt-32 px-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-6xl font-light text-gray-900 mb-8 animate-fadeInUp">Careers Page</h1>
+        <h1 className="text-6xl font-light text-gray-900 mb-8 animate-fadeInUp">Join Our Team</h1>
         <div className="space-y-6 animate-fadeInUp" style={{ animationDelay: '200ms' }}>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Join our team - career opportunities and company culture.
+            Be part of our creative journey - career opportunities at Smari Creatives.
           </p>
           <p className="text-lg text-gray-500">
             Interactive job listings and application forms coming soon.
@@ -84,10 +84,10 @@ const Contact = () => (
   <PageTransition>
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 pt-32 px-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-6xl font-light text-gray-900 mb-8 animate-fadeInUp">Contact Page</h1>
+        <h1 className="text-6xl font-light text-gray-900 mb-8 animate-fadeInUp">Let's Create Together</h1>
         <div className="space-y-6 animate-fadeInUp" style={{ animationDelay: '200ms' }}>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Get in touch with our team for collaboration and inquiries.
+            Ready to start your next creative project? Get in touch with our team.
           </p>
           <p className="text-lg text-gray-500">
             Interactive contact forms and office information coming soon.
@@ -98,17 +98,17 @@ const Contact = () => (
   </PageTransition>
 );
 
-const MetaTalks = () => (
+const Blog = () => (
   <PageTransition>
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 pt-32 px-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-6xl font-light text-gray-900 mb-8 animate-fadeInUp">MetaTalks Page</h1>
+        <h1 className="text-6xl font-light text-gray-900 mb-8 animate-fadeInUp">Creative Insights</h1>
         <div className="space-y-6 animate-fadeInUp" style={{ animationDelay: '200ms' }}>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Insights, events, and thought leadership from our design experts.
+            Thoughts, inspiration, and insights from our creative team.
           </p>
           <p className="text-lg text-gray-500">
-            Blog posts, event listings, and video content coming soon.
+            Blog posts and creative content coming soon.
           </p>
         </div>
       </div>
