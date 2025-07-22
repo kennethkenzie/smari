@@ -14,9 +14,18 @@
   background: transparent;
 }
 
-/* Hide default cursor on interactive elements */
-* {
-  cursor: none !important;
+/* Custom cursor only for desktop - hide default cursor on interactive elements */
+@media (min-width: 768px) {
+  .custom-cursor-enabled * {
+    cursor: none !important;
+  }
+}
+
+/* Fallback for mobile/touch devices */
+@media (max-width: 767px) {
+  .custom-cursor-enabled * {
+    cursor: auto !important;
+  }
 }
 
 /* Smooth transitions for all interactive elements */
