@@ -142,7 +142,7 @@ function App() {
           <Route path="/offices" element={<Offices />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/metatalks" element={<MetaTalks />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
         <Footer />
       </BrowserRouter>
