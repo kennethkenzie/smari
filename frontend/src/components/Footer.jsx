@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="relative mt-32">
+    <footer className="relative">
       {/* Main Footer Section */}
       <div className="flex flex-col lg:flex-row min-h-[40vh] lg:min-h-[50vh]">
-        {/* Left Footer - Red Side */}
-        <div className="w-full lg:w-1/2 bg-metadesign-red px-8 lg:px-16 py-16 lg:py-24 flex flex-col">
+        {/* Left Footer - Black Side */}
+        <div className="w-full lg:w-1/2 bg-black px-8 lg:px-16 py-16 lg:py-24 flex flex-col">
           <div className="flex-1 space-y-12">
             {/* Contact Information */}
             <div className="space-y-8">
@@ -29,7 +29,7 @@ const Footer = () => {
               <div className="pt-8">
                 <Link 
                   to="/contact"
-                  className="inline-flex items-center bg-white text-metadesign-red px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                  className="inline-flex items-center bg-metadesign-red text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-red-600 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
                   data-cursor="red"
                 >
                   Start Your Project
@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
 
         {/* Right Footer - Black Side */}
-        <div className="w-full lg:w-1/2 bg-black px-8 lg:px-16 py-16 lg:py-24 flex flex-col">
+        <div className="w-full lg:w-1/2 bg-black px-8 lg:px-16 py-16 lg:py-24 flex flex-col border-l border-white/10">
           <div className="flex-1 space-y-12">
             {/* Global Offices */}
             <div>
