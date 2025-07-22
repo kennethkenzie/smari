@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 const VideoCarousel = () => {
   const [currentVideo, setCurrentVideo] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   // Mock video data - in a real app, these would be actual video URLs
   const videos = [
@@ -47,19 +48,29 @@ const VideoCarousel = () => {
     return () => clearInterval(interval);
   }, [isPlaying, videos.length]);
 
+  // Preload images
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => setImageLoaded(true);
+    img.src = videos[currentVideo].thumbnail;
+  }, [currentVideo, videos]);
+
   const goToVideo = (index) => {
     setCurrentVideo(index);
     setIsPlaying(false);
+    setImageLoaded(false);
   };
 
   const nextVideo = () => {
     setCurrentVideo((prev) => (prev + 1) % videos.length);
     setIsPlaying(false);
+    setImageLoaded(false);
   };
 
   const prevVideo = () => {
     setCurrentVideo((prev) => (prev - 1 + videos.length) % videos.length);
     setIsPlaying(false);
+    setImageLoaded(false);
   };
 
   const togglePlay = () => {
@@ -67,11 +78,14 @@ const VideoCarousel = () => {
   };
 
   return (
-    <div className="absolute inset-0 w-full h-full overflow-hidden">
+    <div className="absolute inset-0 w-full h-full overflow-hidden bg-gray-900">
       {/* Full Background Video Display */}
       <div 
         className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out group"
-        style={{ backgroundImage: `url(${videos[currentVideo].thumbnail})` }}
+        style={{ 
+          backgroundImage: `url(${videos[currentVideo].thumbnail})`,
+          opacity: imageLoaded ? 1 : 0
+        }}
       >
         {/* Video Overlay */}
         <div className="absolute inset-0 bg-black/50 transition-opacity duration-300 group-hover:bg-black/30"></div>
@@ -136,8 +150,18 @@ const VideoCarousel = () => {
         </button>
       </div>
 
+      {/* Fallback content when image is loading */}
+      {!imageLoaded && (
+        <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
+          <div className="text-white text-center">
+            <div className="w-16 h-16 border-4 border-metadesign-red border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <p className="text-lg font-light">Loading...</p>
+          </div>
+        </div>
+      )}
+
       {/* Navigation Dots - Bottom Center */}
-      <div className="absolute bottom-8 left-0 right-0 flex items-center justify-center space-x-4">
+      <div className="absolute bottom-8 left-0 right-0 flex items-center justify-center space-x-4 z-20">
         {videos.map((_, index) => (
           <button
             key={index}
@@ -157,7 +181,7 @@ const VideoCarousel = () => {
       </div>
 
       {/* Video Counter - Bottom Right */}
-      <div className="absolute bottom-8 right-8 text-white/80 text-base font-light">
+      <div className="absolute bottom-8 right-8 text-white/80 text-base font-light z-20">
         <div className="bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full">
           {String(currentVideo + 1).padStart(2, '0')} / {String(videos.length).padStart(2, '0')}
         </div>
