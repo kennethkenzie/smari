@@ -129,9 +129,7 @@ const EnhancedHomepage = () => {
 
         {/* Right Side - Full Video Carousel Overlay */}
         <div className="w-full lg:w-1/2 relative overflow-hidden">
-          <ScrollAnimations animation="slideInRight" delay={800}>
-            <VideoCarousel />
-          </ScrollAnimations>
+          <VideoCarousel />
         </div>
       </div>
 
