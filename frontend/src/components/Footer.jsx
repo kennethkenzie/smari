@@ -16,7 +16,7 @@ const Footer = () => {
                 <div className="space-y-4 text-white/80">
                   <p className="text-lg">
                     <span className="block font-medium">Email</span>
-                    hello@metadesign.com
+                    hello@smaricreatives.com
                   </p>
                   <p className="text-lg">
                     <span className="block font-medium">Phone</span>
@@ -53,8 +53,8 @@ const Footer = () => {
               <Link to="/offices" className="text-white text-lg font-light hover:opacity-70 transition-opacity duration-300">
                 Offices
               </Link>
-              <Link to="/metatalks" className="text-white text-lg font-light hover:opacity-70 transition-opacity duration-300">
-                MetaTalks
+              <Link to="/blog" className="text-white text-lg font-light hover:opacity-70 transition-opacity duration-300">
+                Blog
               </Link>
             </div>
           </div>
@@ -68,11 +68,7 @@ const Footer = () => {
               <h3 className="text-white text-2xl font-light mb-6">Global Offices</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-white/80">
                 <div>
-                  <p className="font-medium">Berlin</p>
-                  <p className="text-sm text-white/60">Germany</p>
-                </div>
-                <div>
-                  <p className="font-medium">San Francisco</p>
+                  <p className="font-medium">New York</p>
                   <p className="text-sm text-white/60">USA</p>
                 </div>
                 <div>
@@ -80,8 +76,12 @@ const Footer = () => {
                   <p className="text-sm text-white/60">UK</p>
                 </div>
                 <div>
-                  <p className="font-medium">Beijing</p>
-                  <p className="text-sm text-white/60">China</p>
+                  <p className="font-medium">Dubai</p>
+                  <p className="text-sm text-white/60">UAE</p>
+                </div>
+                <div>
+                  <p className="font-medium">Tokyo</p>
+                  <p className="text-sm text-white/60">Japan</p>
                 </div>
               </div>
             </div>
@@ -166,8 +166,8 @@ const Footer = () => {
             </Link>
           </div>
           <div className="text-center lg:text-right">
-            <p>© 2024 MetaDesign, part of Publicis Groupe</p>
-            <p className="text-xs text-gray-500 mt-1">Transforming businesses since 1979</p>
+            <p>© 2024 Smari Creatives</p>
+            <p className="text-xs text-gray-500 mt-1">Creating bold brands since 2020</p>
           </div>
         </div>
       </div>
