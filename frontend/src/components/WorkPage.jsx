@@ -101,14 +101,14 @@ const WorkPage = () => {
         {/* Hero Section - Split Screen Layout */}
         <div className="flex flex-col lg:flex-row min-h-screen">
           {/* Left Side - Red */}
-          <div className="w-full lg:w-1/2 bg-metadesign-red relative flex items-end justify-center pb-16 lg:pb-32 pt-32 lg:pt-0 min-h-[50vh] lg:min-h-screen">
+          <div className="w-full lg:w-1/4 bg-metadesign-red relative flex items-end justify-center pb-16 lg:pb-32 pt-32 lg:pt-0 min-h-[50vh] lg:min-h-screen">
             <div className="text-white text-xl font-light tracking-wider transform lg:-rotate-90 origin-center">
               Work
             </div>
           </div>
 
           {/* Right Side - Dark Purple/Navy */}
-          <div className="w-full lg:w-1/2 bg-gradient-to-br from-purple-900 to-indigo-900 relative flex items-center justify-center px-8 lg:px-16 py-16 lg:py-0 min-h-[50vh] lg:min-h-screen">
+          <div className="w-full lg:w-3/4 bg-gradient-to-br from-purple-900 to-indigo-900 relative flex items-center justify-center px-8 lg:px-16 py-16 lg:py-0 min-h-[50vh] lg:min-h-screen">
             {/* Background Text */}
             <div className="absolute inset-0 flex items-center justify-center opacity-10">
               <div className="text-white text-6xl lg:text-9xl font-bold tracking-wider">
