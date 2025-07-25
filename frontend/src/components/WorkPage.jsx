@@ -125,7 +125,7 @@ const WorkPage = () => {
 
   return (
     <PageTransition>
-      <div className="min-h-screen bg-white relative work-page-container">
+      <div className="min-h-screen bg-white relative">
         {/* Red sidebar extending to full page height */}
         <div className="red-sidebar-full-height">
           <div className="red-sidebar-content">
@@ -134,6 +134,9 @@ const WorkPage = () => {
             </div>
           </div>
         </div>
+
+        {/* Main content container */}
+        <div className="work-content">
         {/* Hero Section - Split Screen Layout */}
         <div className="flex flex-col lg:flex-row">
           {/* Mobile Red Section */}
