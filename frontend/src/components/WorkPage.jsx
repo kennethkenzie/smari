@@ -87,10 +87,6 @@ const WorkPage = () => {
     }
   ];
 
-  const filteredProjects = selectedCategory === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
-
   return (
     <PageTransition>
       <div className="min-h-screen bg-white">
