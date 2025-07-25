@@ -563,8 +563,8 @@ const WorkPage = () => {
 
               {/* Medium Cards Grid - Remaining Projects */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-24 lg:gap-32 py-12 px-8">
-                {projects.slice(8).map((project, index) => (
-                  <ScrollAnimations key={project.id} delay={(index + 8) * 100}>
+                {projects.slice(10).map((project, index) => (
+                  <ScrollAnimations key={project.id} delay={(index + 10) * 100}>
                     <div className="group cursor-pointer px-2 py-4" data-cursor="red">
                       {/* Project Image */}
                       <div className="relative aspect-[4/3] mb-16 overflow-hidden rounded-lg bg-gray-100 transform scale-500 origin-center">
