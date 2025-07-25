@@ -310,6 +310,34 @@ const WorkPage = () => {
                               </div>
                             </div>
                           </div>
+
+                          {/* Project Info - Outside Card */}
+                          <div className="space-y-4">
+                            {/* Tags */}
+                            <div className="flex flex-wrap gap-3">
+                              {project.tags.map((tag) => (
+                                <span
+                                  key={tag}
+                                  className="text-sm text-gray-500 bg-gray-100 px-4 py-2 rounded-full font-semibold"
+                                >
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+
+                            {/* Title and Client */}
+                            <div>
+                              <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-black mb-2 group-hover:text-metadesign-red transition-colors duration-300">
+                                {project.title}
+                              </h3>
+                              <p className="text-gray-600 mb-3 text-base md:text-lg font-semibold">
+                                {project.client} • {project.year}
+                              </p>
+                              <p className="text-gray-500 text-sm md:text-base leading-relaxed font-semibold">
+                                {project.description}
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       </ScrollAnimations>
                     ))}
