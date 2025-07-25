@@ -27,23 +27,7 @@ const About = () => (
   </PageTransition>
 );
 
-const Work = () => (
-  <PageTransition>
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 pt-32 px-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-6xl font-light text-gray-900 mb-8 animate-fadeInUp">Our Work</h1>
-        <div className="space-y-6 animate-fadeInUp" style={{ animationDelay: '200ms' }}>
-          <p className="text-xl text-gray-600 leading-relaxed">
-            Creative projects and brand campaigns that drive results and make an impact.
-          </p>
-          <p className="text-lg text-gray-500">
-            Coming soon with advanced hover effects and project showcases.
-          </p>
-        </div>
-      </div>
-    </div>
-  </PageTransition>
-);
+const Work = () => <WorkPage />;
 
 const Offices = () => (
   <PageTransition>
