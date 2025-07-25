@@ -147,7 +147,7 @@ const WorkPage = () => {
         </div>
 
         {/* Work Section Header */}
-        <div className="py-16 px-8 lg:px-16 bg-white lg:ml-1/3">
+        <div className="py-16 px-8 lg:px-16 bg-white lg:ml-1/6">
           <div className="max-w-7xl mx-auto">
             <ScrollAnimations>
               <div className="mb-16">
@@ -180,7 +180,7 @@ const WorkPage = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="px-8 lg:px-16 pb-32 bg-white lg:ml-1/3">
+        <div className="px-8 lg:px-16 pb-32 bg-white lg:ml-1/6">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
               {filteredProjects.map((project, index) => (
@@ -239,7 +239,7 @@ const WorkPage = () => {
         </div>
 
         {/* Call to Action Section */}
-        <div className="bg-black px-8 lg:px-16 py-24 lg:ml-1/3">
+        <div className="bg-black px-8 lg:px-16 py-24 lg:ml-1/6">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollAnimations>
               <h2 className="text-4xl lg:text-6xl font-light text-white mb-6">
