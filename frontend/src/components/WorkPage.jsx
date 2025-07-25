@@ -201,10 +201,10 @@ const WorkPage = () => {
         {/* Projects Grid */}
         <div className="px-8 lg:px-16 pb-32 bg-white">
           <div className="max-w-7xl mx-auto">
-            <div className="space-y-16">
+            <div className="space-y-24">
               {/* First Project Card - Large Landscape */}
               <ScrollAnimations delay={0}>
-                <div className="group cursor-pointer" data-cursor="red">
+                <div className="group cursor-pointer py-8" data-cursor="red">
                   {/* First Project Image - Landscape View */}
                   <div 
                     className="relative overflow-hidden rounded-lg bg-gray-100 mx-auto"
@@ -232,7 +232,7 @@ const WorkPage = () => {
                   </div>
 
                   {/* Project Info - Outside Card */}
-                  <div className="mt-8">
+                  <div className="mt-8 px-4">
                     <div className="flex justify-between items-start">
                       {/* Client - Left */}
                       <p className="text-2xl font-semibold text-black">
@@ -257,12 +257,12 @@ const WorkPage = () => {
 
               {/* Alternating Pattern: 3 Medium Cards, then 1 Large Landscape Card */}
               {Array.from({ length: Math.ceil((projects.length - 1) / 4) }, (_, groupIndex) => (
-                <div key={groupIndex} className="space-y-16">
+                <div key={groupIndex} className="space-y-24">
                   {/* Three Medium Cards */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-20">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16 lg:gap-24 py-8">
                     {projects.slice(1 + groupIndex * 4, 4 + groupIndex * 4).map((project, index) => (
                       <ScrollAnimations key={project.id} delay={(index + 1 + groupIndex * 4) * 100}>
-                        <div className="group cursor-pointer" data-cursor="red">
+                        <div className="group cursor-pointer px-4 py-6" data-cursor="red">
                           {/* Project Image */}
                           <div className="relative aspect-[4/3] mb-12 overflow-hidden rounded-lg bg-gray-100 transform scale-125">
                             <img
@@ -310,7 +310,7 @@ const WorkPage = () => {
                   {/* Large Landscape Card (if more projects available) */}
                   {projects[4 + groupIndex * 4] && (
                     <ScrollAnimations delay={(4 + groupIndex * 4) * 100}>
-                      <div className="group cursor-pointer" data-cursor="red">
+                      <div className="group cursor-pointer py-8" data-cursor="red">
                         {/* Large Landscape Project Image */}
                         <div 
                           className="relative overflow-hidden rounded-lg bg-gray-100 mx-auto"
@@ -338,7 +338,7 @@ const WorkPage = () => {
                         </div>
 
                         {/* Project Info - Outside Card */}
-                        <div className="mt-8">
+                        <div className="mt-8 px-4">
                           <div className="flex justify-between items-start">
                             {/* Client - Left */}
                             <p className="text-2xl font-semibold text-black">
