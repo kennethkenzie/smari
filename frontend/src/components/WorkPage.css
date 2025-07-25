@@ -2,6 +2,13 @@
 .work-page-container {
   position: relative;
   min-height: 100vh;
+  margin-left: 16.666667%; /* 1/6 for desktop */
+}
+
+@media (max-width: 1023px) {
+  .work-page-container {
+    margin-left: 0;
+  }
 }
 
 .red-sidebar-full-height {
@@ -10,7 +17,7 @@
   left: 0;
   width: 16.666667%; /* 1/6 */
   background-color: #f2021c; /* metadesign-red */
-  z-index: 40;
+  z-index: 30; /* Reduced from 40 to be behind footer */
   height: 100vh;
   min-height: 100vh;
 }
@@ -37,6 +44,17 @@
   letter-spacing: 0.1em;
   transform: rotate(-90deg);
   transform-origin: center;
+}
+
+/* Content should respect the sidebar */
+.work-content {
+  margin-left: 0;
+}
+
+@media (min-width: 1024px) {
+  .work-content {
+    margin-left: 16.666667%; /* 1/6 */
+  }
 }
 
 @media (max-width: 1023px) {
