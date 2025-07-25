@@ -652,30 +652,6 @@ const WorkPage = () => {
             </div>
           </div>
         </div>
-
-        {/* Call to Action Section */}
-        <div className="bg-black px-8 lg:px-16 py-24">
-          <div className="max-w-4xl mx-auto text-center">
-            <ScrollAnimations>
-              <h2 className="text-3xl md:text-4xl lg:text-6xl font-light text-white mb-6">
-                Ready to create something bold?
-              </h2>
-              <p className="text-lg md:text-xl text-white/80 mb-12 leading-relaxed">
-                Let's discuss your next project and bring your vision to life.
-              </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center bg-metadesign-red text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-red-600 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-                data-cursor="red"
-              >
-                Start Your Project
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </ScrollAnimations>
-          </div>
-        </div>
         </div>
       </div>
     </PageTransition>
