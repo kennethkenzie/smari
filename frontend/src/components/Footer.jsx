@@ -145,29 +145,29 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Legal Section */}
-      <div className="bg-gray-900 px-8 lg:px-16 py-8">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 text-sm text-gray-400">
-          <div className="flex flex-wrap items-center gap-8">
-            <Link to="/imprint" className="hover:text-gray-200 transition-colors duration-300">
-              Imprint
-            </Link>
-            <Link to="/privacy" className="hover:text-gray-200 transition-colors duration-300">
-              Data Privacy
-            </Link>
-            <button className="hover:text-gray-200 transition-colors duration-300">
-              Cookies Settings
-            </button>
-            <Link to="/terms" className="hover:text-gray-200 transition-colors duration-300">
-              Terms of Service
-            </Link>
-          </div>
-          <div className="text-center lg:text-right">
-            <p>© 2024 Smari Creatives</p>
-            <p className="text-xs text-gray-500 mt-1">Creating bold brands since 2020</p>
+        {/* Bottom Legal Section */}
+        <div className="bg-gray-900 px-8 lg:px-16 py-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 text-sm text-gray-400">
+            <div className="flex flex-wrap items-center gap-6 lg:gap-8">
+              <Link to="/imprint" className="hover:text-gray-200 transition-colors duration-300">
+                Imprint
+              </Link>
+              <Link to="/privacy" className="hover:text-gray-200 transition-colors duration-300">
+                Data Privacy
+              </Link>
+              <button className="hover:text-gray-200 transition-colors duration-300">
+                Cookies Settings
+              </button>
+              <Link to="/terms" className="hover:text-gray-200 transition-colors duration-300">
+                Terms of Service
+              </Link>
+            </div>
+            <div className="text-center lg:text-right">
+              <p>© 2024 Smari Creatives</p>
+              <p className="text-xs text-gray-500 mt-1">Creating bold brands since 2020</p>
+            </div>
           </div>
         </div>
-      </div>
     </footer>
   );
 };
