@@ -182,12 +182,12 @@ const WorkPage = () => {
         {/* Projects Grid */}
         <div className="px-8 lg:px-16 pb-32 bg-white lg:ml-1/6">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
               {filteredProjects.map((project, index) => (
                 <ScrollAnimations key={project.id} delay={index * 100}>
                   <div className="group cursor-pointer" data-cursor="red">
                     {/* Project Image */}
-                    <div className="relative aspect-[4/3] mb-6 overflow-hidden rounded-lg bg-gray-100">
+                    <div className="relative aspect-[4/3] mb-8 overflow-hidden rounded-lg bg-gray-100">
                       <img
                         src={project.image}
                         alt={project.title}
@@ -198,20 +198,20 @@ const WorkPage = () => {
                       
                       {/* Hover Overlay */}
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                        <div className="bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full text-black font-medium">
+                        <div className="bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full text-black font-medium text-lg">
                           View Case Study
                         </div>
                       </div>
                     </div>
 
                     {/* Project Info */}
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                       {/* Tags */}
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-3">
                         {project.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full"
+                            className="text-sm text-gray-500 bg-gray-100 px-4 py-2 rounded-full"
                           >
                             {tag}
                           </span>
@@ -220,13 +220,13 @@ const WorkPage = () => {
 
                       {/* Title and Client */}
                       <div>
-                        <h3 className="text-xl lg:text-2xl font-light text-black mb-1 group-hover:text-metadesign-red transition-colors duration-300">
+                        <h3 className="text-2xl lg:text-3xl font-light text-black mb-2 group-hover:text-metadesign-red transition-colors duration-300">
                           {project.title}
                         </h3>
-                        <p className="text-gray-600 mb-2">
+                        <p className="text-gray-600 mb-3 text-lg">
                           {project.client} • {project.year}
                         </p>
-                        <p className="text-gray-500 text-sm leading-relaxed">
+                        <p className="text-gray-500 text-base leading-relaxed">
                           {project.description}
                         </p>
                       </div>
