@@ -268,6 +268,18 @@ const WorkPage = () => {
                         />
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
                         
+                        {/* Project Labels at Bottom */}
+                        <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                          <div className="flex justify-between items-end text-white">
+                            <div>
+                              <h4 className="text-lg font-medium">{project.client}</h4>
+                            </div>
+                            <div className="text-right">
+                              <p className="text-sm opacity-90">{project.tags.join(', ')}</p>
+                            </div>
+                          </div>
+                        </div>
+                        
                         {/* Hover Overlay */}
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
                           <div className="bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full text-black font-medium text-lg">
