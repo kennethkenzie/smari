@@ -247,7 +247,7 @@ const WorkPage = () => {
                   <div className="mt-6">
                     <div className="flex justify-between items-start">
                       {/* Client - Left */}
-                      <p className="text-lg font-semibold text-black">
+                      <p className="text-2xl font-semibold text-black">
                         {projects[0].client}
                       </p>
                       
@@ -256,7 +256,7 @@ const WorkPage = () => {
                         {projects[0].tags.map((tag) => (
                           <span
                             key={tag}
-                            className="text-sm text-gray-700 font-medium"
+                            className="text-lg text-gray-700 font-medium"
                           >
                             {tag}
                           </span>
