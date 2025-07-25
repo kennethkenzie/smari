@@ -210,8 +210,8 @@ const WorkPage = () => {
                     className="relative overflow-hidden rounded-lg bg-gray-100 mx-auto"
                     style={{ 
                       width: '100%', 
-                      maxWidth: '1280px',
-                      height: '720px',
+                      maxWidth: '1600px',
+                      height: '900px',
                       aspectRatio: '16/9'
                     }}
                   >
@@ -222,18 +222,6 @@ const WorkPage = () => {
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
-                    
-                    {/* Project Labels at Bottom */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                      <div className="flex justify-between items-end text-white">
-                        <div>
-                          <h4 className="text-lg font-medium">{projects[0].client}</h4>
-                        </div>
-                        <div className="text-right">
-                          <p className="text-sm opacity-90">{projects[0].tags.join(', ')}</p>
-                        </div>
-                      </div>
-                    </div>
                     
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
