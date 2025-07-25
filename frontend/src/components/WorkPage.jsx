@@ -158,10 +158,10 @@ const WorkPage = () => {
               {/* First Project Card - Large Size */}
               <ScrollAnimations delay={0}>
                 <div className="group cursor-pointer" data-cursor="red">
-                  {/* First Project Image - 2560x1440 */}
+                  {/* First Project Image - 2560x1440 Rotated */}
                   <div 
-                    className="relative overflow-hidden rounded-lg bg-gray-100 mx-auto"
-                    style={{ width: '2560px', height: '1440px', maxWidth: '100%' }}
+                    className="relative overflow-hidden rounded-lg bg-gray-100 mx-auto transform rotate-90"
+                    style={{ width: '1440px', height: '2560px', maxWidth: '100%' }}
                   >
                     <img
                       src={projects[0].image}
@@ -173,7 +173,7 @@ const WorkPage = () => {
                     
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                      <div className="bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full text-black font-medium text-lg">
+                      <div className="bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full text-black font-medium text-lg transform -rotate-90">
                         View Case Study
                       </div>
                     </div>
