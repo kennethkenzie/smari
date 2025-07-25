@@ -381,7 +381,7 @@ const WorkPage = () => {
                   <ScrollAnimations key={project.id} delay={(index + 1) * 100}>
                     <div className="group cursor-pointer px-4 py-6" data-cursor="red">
                       {/* Project Image */}
-                      <div className="relative aspect-[4/3] mb-12 overflow-hidden rounded-lg bg-gray-100 transform scale-300">
+                      <div className="relative aspect-[4/3] mb-12 overflow-hidden rounded-lg bg-gray-100 transform scale-500">
                         <img
                           src={project.image}
                           alt={project.title}
