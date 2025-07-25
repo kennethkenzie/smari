@@ -215,13 +215,13 @@ const WorkPage = () => {
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
                     
-                    {/* Project Labels at Bottom - Rotated */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent transform -rotate-90 origin-center">
-                      <div className="flex justify-between items-end text-white">
-                        <div>
+                    {/* Project Labels at Bottom - Fixed for Rotation */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                      <div className="flex justify-between items-end text-white transform -rotate-90 origin-center">
+                        <div className="transform rotate-180">
                           <h4 className="text-lg font-medium">{projects[0].client}</h4>
                         </div>
-                        <div className="text-right">
+                        <div className="text-right transform rotate-180">
                           <p className="text-sm opacity-90">{projects[0].tags.join(', ')}</p>
                         </div>
                       </div>
