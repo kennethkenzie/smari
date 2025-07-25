@@ -125,18 +125,11 @@ const WorkPage = () => {
 
   return (
     <PageTransition>
-      <div className="min-h-screen bg-white relative">
+      <div className="min-h-screen bg-white relative work-page-container">
         {/* Red sidebar extending to full page height */}
-        <div 
-          className="w-1/6 bg-metadesign-red fixed top-0 left-0 z-40 hidden lg:block"
-          style={{ 
-            height: '100%',
-            minHeight: '100vh',
-            bottom: 0 
-          }}
-        >
-          <div className="flex items-end justify-center pb-32 h-full">
-            <div className="text-white text-xl font-light tracking-wider transform -rotate-90 origin-center">
+        <div className="red-sidebar-full-height">
+          <div className="red-sidebar-content">
+            <div className="red-sidebar-text">
               Work
             </div>
           </div>
