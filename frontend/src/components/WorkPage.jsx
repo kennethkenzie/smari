@@ -147,7 +147,7 @@ const WorkPage = () => {
           </div>
 
           {/* Right Side - Dark Purple/Navy with Video */}
-          <div className="w-full lg:w-5/6 lg:ml-auto bg-gradient-to-br from-purple-900 to-indigo-900 relative flex items-center justify-center px-8 lg:px-16 py-16 lg:py-0 h-[50vh] lg:h-[70vh] mt-0 lg:mt-0">
+          <div className="w-full lg:w-full bg-gradient-to-br from-purple-900 to-indigo-900 relative flex items-center justify-center px-8 lg:px-16 py-16 lg:py-0 h-[50vh] lg:h-[70vh] mt-0">
             {/* Background Video */}
             <video
               autoPlay
@@ -186,11 +186,11 @@ const WorkPage = () => {
         </div>
 
         {/* Work Section Header */}
-        <div className="py-8 px-8 lg:px-16 bg-white lg:ml-1/6">
+        <div className="py-8 px-8 lg:px-16 bg-white">
           <div className="max-w-7xl mx-auto">
             <ScrollAnimations>
               <div className="mb-12">
-                <h2 className="text-6xl lg:text-8xl font-bold text-black mb-6 text-left">
+                <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-black mb-6 text-left">
                   Our Work
                 </h2>
               </div>
@@ -199,7 +199,7 @@ const WorkPage = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="px-8 lg:px-16 pb-32 bg-white lg:ml-1/6">
+        <div className="px-8 lg:px-16 pb-32 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="space-y-16">
               {/* First Project Card - Large Size */}
@@ -207,8 +207,13 @@ const WorkPage = () => {
                 <div className="group cursor-pointer" data-cursor="red">
                   {/* First Project Image - 1280x720 Rotated (Half Size) */}
                   <div 
-                    className="relative overflow-hidden rounded-lg bg-gray-100 mx-auto transform rotate-90"
-                    style={{ width: '720px', height: '1280px', maxWidth: '100%' }}
+                    className="relative overflow-hidden rounded-lg bg-gray-100 mx-auto transform lg:rotate-90"
+                    style={{ 
+                      width: '100%', 
+                      maxWidth: '720px',
+                      height: '400px',
+                      aspectRatio: '16/9'
+                    }}
                   >
                     <img
                       src={projects[0].image}
@@ -218,13 +223,13 @@ const WorkPage = () => {
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
                     
-                    {/* Project Labels at Bottom - Fixed for Rotation */}
+                    {/* Project Labels at Bottom */}
                     <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                      <div className="flex justify-between items-end text-white transform -rotate-90 origin-center">
-                        <div className="transform rotate-180">
+                      <div className="flex justify-between items-end text-white">
+                        <div>
                           <h4 className="text-lg font-medium">{projects[0].client}</h4>
                         </div>
-                        <div className="text-right transform rotate-180">
+                        <div className="text-right">
                           <p className="text-sm opacity-90">{projects[0].tags.join(', ')}</p>
                         </div>
                       </div>
@@ -232,7 +237,7 @@ const WorkPage = () => {
                     
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                      <div className="bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full text-black font-medium text-lg transform -rotate-90">
+                      <div className="bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full text-black font-medium text-lg">
                         View Case Study
                       </div>
                     </div>
@@ -254,13 +259,13 @@ const WorkPage = () => {
 
                     {/* Title and Client */}
                     <div>
-                      <h3 className="text-3xl lg:text-4xl font-light text-black mb-2 group-hover:text-metadesign-red transition-colors duration-300">
+                      <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-black mb-2 group-hover:text-metadesign-red transition-colors duration-300">
                         {projects[0].title}
                       </h3>
-                      <p className="text-gray-600 mb-3 text-xl">
+                      <p className="text-gray-600 mb-3 text-lg md:text-xl">
                         {projects[0].client} • {projects[0].year}
                       </p>
-                      <p className="text-gray-500 text-lg leading-relaxed">
+                      <p className="text-gray-500 text-base md:text-lg leading-relaxed">
                         {projects[0].description}
                       </p>
                     </div>
@@ -269,7 +274,7 @@ const WorkPage = () => {
               </ScrollAnimations>
 
               {/* Rest of Projects Grid - Regular Size */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
                 {projects.slice(1).map((project, index) => (
                   <ScrollAnimations key={project.id} delay={(index + 1) * 100}>
                     <div className="group cursor-pointer" data-cursor="red">
@@ -319,13 +324,13 @@ const WorkPage = () => {
 
                         {/* Title and Client */}
                         <div>
-                          <h3 className="text-2xl lg:text-3xl font-light text-black mb-2 group-hover:text-metadesign-red transition-colors duration-300">
+                          <h3 className="text-xl md:text-2xl lg:text-3xl font-light text-black mb-2 group-hover:text-metadesign-red transition-colors duration-300">
                             {project.title}
                           </h3>
-                          <p className="text-gray-600 mb-3 text-lg">
+                          <p className="text-gray-600 mb-3 text-base md:text-lg">
                             {project.client} • {project.year}
                           </p>
-                          <p className="text-gray-500 text-base leading-relaxed">
+                          <p className="text-gray-500 text-sm md:text-base leading-relaxed">
                             {project.description}
                           </p>
                         </div>
@@ -339,13 +344,13 @@ const WorkPage = () => {
         </div>
 
         {/* Call to Action Section */}
-        <div className="bg-black px-8 lg:px-16 py-24 lg:ml-1/6">
+        <div className="bg-black px-8 lg:px-16 py-24">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollAnimations>
-              <h2 className="text-4xl lg:text-6xl font-light text-white mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-6xl font-light text-white mb-6">
                 Ready to create something bold?
               </h2>
-              <p className="text-xl text-white/80 mb-12 leading-relaxed">
+              <p className="text-lg md:text-xl text-white/80 mb-12 leading-relaxed">
                 Let's discuss your next project and bring your vision to life.
               </p>
               <Link
@@ -360,6 +365,7 @@ const WorkPage = () => {
               </Link>
             </ScrollAnimations>
           </div>
+        </div>
         </div>
       </div>
     </PageTransition>
