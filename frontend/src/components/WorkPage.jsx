@@ -98,24 +98,54 @@ const WorkPage = () => {
   return (
     <PageTransition>
       <div className="min-h-screen bg-white">
-        {/* Header Section */}
-        <div className="pt-32 pb-16 px-8 lg:px-16">
+        {/* Hero Section - Split Screen Layout */}
+        <div className="flex min-h-screen">
+          {/* Left Side - Red */}
+          <div className="w-1/2 bg-metadesign-red relative flex items-end justify-center pb-32">
+            <div className="text-white text-xl font-light tracking-wider transform -rotate-90 origin-center">
+              Work
+            </div>
+          </div>
+
+          {/* Right Side - Dark Purple/Navy */}
+          <div className="w-1/2 bg-gradient-to-br from-purple-900 to-indigo-900 relative flex items-center justify-center px-16">
+            {/* Background Text */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-10">
+              <div className="text-white text-9xl font-bold tracking-wider">
+                smari
+              </div>
+            </div>
+            
+            {/* Main Content */}
+            <div className="relative z-10 text-white max-w-lg">
+              <ScrollAnimations>
+                <h1 className="text-5xl lg:text-6xl font-light leading-tight mb-8">
+                  Creativity with the power to transform
+                </h1>
+                <p className="text-xl leading-relaxed opacity-90">
+                  See how the work we have done for our clients and partners across industries, 
+                  regions, and markets has shaped their future and set them up for long-term 
+                  sustainable success.
+                </p>
+              </ScrollAnimations>
+            </div>
+          </div>
+        </div>
+
+        {/* Work Section Header */}
+        <div className="py-16 px-8 lg:px-16 bg-white">
           <div className="max-w-7xl mx-auto">
             <ScrollAnimations>
-              <div className="text-center mb-16">
-                <h1 className="text-6xl lg:text-8xl font-light text-black mb-6">
+              <div className="mb-16">
+                <h2 className="text-6xl lg:text-8xl font-light text-black mb-6">
                   Our Work
-                </h1>
-                <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                  We create bold brands and digital experiences that make an impact. 
-                  Each project is crafted with purpose, precision, and creativity.
-                </p>
+                </h2>
               </div>
             </ScrollAnimations>
 
             {/* Category Filter */}
             <ScrollAnimations>
-              <div className="flex flex-wrap justify-center gap-4 mb-16">
+              <div className="flex flex-wrap justify-start gap-4 mb-16">
                 {categories.map((category) => (
                   <button
                     key={category}
@@ -136,7 +166,7 @@ const WorkPage = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="px-8 lg:px-16 pb-32">
+        <div className="px-8 lg:px-16 pb-32 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
               {filteredProjects.map((project, index) => (
