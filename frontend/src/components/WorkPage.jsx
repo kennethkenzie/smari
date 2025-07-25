@@ -322,63 +322,105 @@ const WorkPage = () => {
         <div className="px-8 lg:px-16 pb-32 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="space-y-24">
-              {/* First Project Card - Large Landscape */}
-              <ScrollAnimations delay={0}>
-                <div className="group cursor-pointer py-8" data-cursor="red">
-                  {/* First Project Image - Landscape View */}
-                  <div 
-                    className="relative overflow-hidden rounded-lg bg-gray-100 mx-auto"
-                    style={{ 
-                      width: '100%', 
-                      maxWidth: '1400px',
-                      height: '600px',
-                      aspectRatio: '7/3'
-                    }}
-                  >
-                    <img
-                      src={projects[0].image}
-                      alt={projects[0].title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
-                    
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                      <div className="bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full text-black font-medium text-lg">
-                        View Case Study
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Project Info - Outside Card */}
-                  <div className="mt-8 px-4">
-                    <div className="flex justify-between items-start">
-                      {/* Client - Left */}
-                      <p className="text-2xl font-semibold text-black">
-                        {projects[0].client}
-                      </p>
+              {/* First Two Project Cards - Split from Original Large Card */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 lg:gap-32 py-12">
+                {/* First Half of Original Large Card */}
+                <ScrollAnimations delay={0}>
+                  <div className="group cursor-pointer py-8" data-cursor="red">
+                    <div 
+                      className="relative overflow-hidden rounded-lg bg-gray-100 mx-auto"
+                      style={{ 
+                        width: '100%', 
+                        maxWidth: '700px',
+                        height: '600px',
+                        aspectRatio: '7/6'
+                      }}
+                    >
+                      <img
+                        src={projects[0].image}
+                        alt={projects[0].title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
                       
-                      {/* Tags - Right */}
-                      <div className="flex flex-wrap gap-2 justify-end">
-                        {projects[0].tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="text-lg text-gray-700 font-medium"
-                          >
-                            {tag}
-                          </span>
-                        ))}
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        <div className="bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full text-black font-medium text-lg">
+                          View Case Study
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Project Info - Outside Card */}
+                    <div className="mt-8 px-4">
+                      <div className="flex justify-between items-start">
+                        <p className="text-2xl font-semibold text-black">
+                          {projects[0].client}
+                        </p>
+                        <div className="flex flex-wrap gap-2 justify-end">
+                          {projects[0].tags.map((tag) => (
+                            <span key={tag} className="text-lg text-gray-700 font-medium">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </ScrollAnimations>
+                </ScrollAnimations>
+
+                {/* Second Half of Original Large Card */}
+                <ScrollAnimations delay={100}>
+                  <div className="group cursor-pointer py-8" data-cursor="red">
+                    <div 
+                      className="relative overflow-hidden rounded-lg bg-gray-100 mx-auto"
+                      style={{ 
+                        width: '100%', 
+                        maxWidth: '700px',
+                        height: '600px',
+                        aspectRatio: '7/6'
+                      }}
+                    >
+                      <img
+                        src={projects[1].image}
+                        alt={projects[1].title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
+                      
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        <div className="bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full text-black font-medium text-lg">
+                          View Case Study
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Project Info - Outside Card */}
+                    <div className="mt-8 px-4">
+                      <div className="flex justify-between items-start">
+                        <p className="text-2xl font-semibold text-black">
+                          {projects[1].client}
+                        </p>
+                        <div className="flex flex-wrap gap-2 justify-end">
+                          {projects[1].tags.map((tag) => (
+                            <span key={tag} className="text-lg text-gray-700 font-medium">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ScrollAnimations>
+              </div>
 
               {/* Medium Cards Grid - First Set */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-24 lg:gap-32 py-12 px-8">
-                {projects.slice(1, 7).map((project, index) => (
-                  <ScrollAnimations key={project.id} delay={(index + 1) * 100}>
+                {projects.slice(2, 8).map((project, index) => (
+                  <ScrollAnimations key={project.id} delay={(index + 2) * 100}>
                     <div className="group cursor-pointer px-2 py-4" data-cursor="red">
                       {/* Project Image */}
                       <div className="relative aspect-[4/3] mb-16 overflow-hidden rounded-lg bg-gray-100 transform scale-500 origin-center">
@@ -424,58 +466,100 @@ const WorkPage = () => {
                 ))}
               </div>
 
-              {/* Second Project Card - Large Landscape */}
-              <ScrollAnimations delay={700}>
-                <div className="group cursor-pointer py-8" data-cursor="red">
-                  {/* Second Project Image - Landscape View */}
-                  <div 
-                    className="relative overflow-hidden rounded-lg bg-gray-100 mx-auto"
-                    style={{ 
-                      width: '100%', 
-                      maxWidth: '1400px',
-                      height: '600px',
-                      aspectRatio: '7/3'
-                    }}
-                  >
-                    <img
-                      src={projects[7].image}
-                      alt={projects[7].title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
-                    
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                      <div className="bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full text-black font-medium text-lg">
-                        View Case Study
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Project Info - Outside Card */}
-                  <div className="mt-8 px-4">
-                    <div className="flex justify-between items-start">
-                      {/* Client - Left */}
-                      <p className="text-2xl font-semibold text-black">
-                        {projects[7].client}
-                      </p>
+              {/* Second Two Project Cards - Split from Original Second Large Card */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 lg:gap-32 py-12">
+                {/* First Half of Second Large Card */}
+                <ScrollAnimations delay={800}>
+                  <div className="group cursor-pointer py-8" data-cursor="red">
+                    <div 
+                      className="relative overflow-hidden rounded-lg bg-gray-100 mx-auto"
+                      style={{ 
+                        width: '100%', 
+                        maxWidth: '700px',
+                        height: '600px',
+                        aspectRatio: '7/6'
+                      }}
+                    >
+                      <img
+                        src={projects[8].image}
+                        alt={projects[8].title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
                       
-                      {/* Tags - Right */}
-                      <div className="flex flex-wrap gap-2 justify-end">
-                        {projects[7].tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="text-lg text-gray-700 font-medium"
-                          >
-                            {tag}
-                          </span>
-                        ))}
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        <div className="bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full text-black font-medium text-lg">
+                          View Case Study
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Project Info - Outside Card */}
+                    <div className="mt-8 px-4">
+                      <div className="flex justify-between items-start">
+                        <p className="text-2xl font-semibold text-black">
+                          {projects[8].client}
+                        </p>
+                        <div className="flex flex-wrap gap-2 justify-end">
+                          {projects[8].tags.map((tag) => (
+                            <span key={tag} className="text-lg text-gray-700 font-medium">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </ScrollAnimations>
+                </ScrollAnimations>
+
+                {/* Second Half of Second Large Card */}
+                <ScrollAnimations delay={900}>
+                  <div className="group cursor-pointer py-8" data-cursor="red">
+                    <div 
+                      className="relative overflow-hidden rounded-lg bg-gray-100 mx-auto"
+                      style={{ 
+                        width: '100%', 
+                        maxWidth: '700px',
+                        height: '600px',
+                        aspectRatio: '7/6'
+                      }}
+                    >
+                      <img
+                        src={projects[9].image}
+                        alt={projects[9].title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
+                      
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        <div className="bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full text-black font-medium text-lg">
+                          View Case Study
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Project Info - Outside Card */}
+                    <div className="mt-8 px-4">
+                      <div className="flex justify-between items-start">
+                        <p className="text-2xl font-semibold text-black">
+                          {projects[9].client}
+                        </p>
+                        <div className="flex flex-wrap gap-2 justify-end">
+                          {projects[9].tags.map((tag) => (
+                            <span key={tag} className="text-lg text-gray-700 font-medium">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ScrollAnimations>
+              </div>
 
               {/* Medium Cards Grid - Remaining Projects */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-24 lg:gap-32 py-12 px-8">
