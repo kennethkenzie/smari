@@ -242,6 +242,34 @@ const WorkPage = () => {
                       </div>
                     </div>
                   </div>
+
+                  {/* First Project Info - Outside Card */}
+                  <div className="space-y-4 mt-8 max-w-4xl">
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-3">
+                      {projects[0].tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-sm text-gray-500 bg-gray-100 px-4 py-2 rounded-full font-semibold"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Title and Client */}
+                    <div>
+                      <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black mb-2 group-hover:text-metadesign-red transition-colors duration-300">
+                        {projects[0].title}
+                      </h3>
+                      <p className="text-gray-600 mb-3 text-lg md:text-xl font-semibold">
+                        {projects[0].client} • {projects[0].year}
+                      </p>
+                      <p className="text-gray-500 text-base md:text-lg leading-relaxed font-semibold">
+                        {projects[0].description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </ScrollAnimations>
 
