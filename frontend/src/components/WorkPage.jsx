@@ -90,26 +90,21 @@ const WorkPage = () => {
   return (
     <PageTransition>
       <div className="min-h-screen bg-white relative">
-        {/* Add a style to make red sidebar extend to full page height */}
-        <style jsx>{`
-          .red-sidebar-full-height {
-            height: 100%;
-            min-height: 100vh;
-            height: calc(100%);
-          }
-          
-          @media (min-width: 1024px) {
-            body {
-              position: relative;
-            }
-            .red-sidebar-full-height {
-              height: 100%;
-              min-height: 100vh;
-              height: auto;
-              bottom: 0;
-            }
-          }
-        `}</style>
+        {/* Red sidebar extending to full page height */}
+        <div 
+          className="w-1/6 bg-metadesign-red fixed top-0 left-0 z-40 hidden lg:block"
+          style={{ 
+            height: '100%',
+            minHeight: '100vh',
+            bottom: 0 
+          }}
+        >
+          <div className="flex items-end justify-center pb-32 h-full">
+            <div className="text-white text-xl font-light tracking-wider transform -rotate-90 origin-center">
+              Work
+            </div>
+          </div>
+        </div>
         {/* Hero Section - Split Screen Layout */}
         <div className="flex flex-col lg:flex-row">
           {/* Left Side - Red (Fixed to Footer) */}
