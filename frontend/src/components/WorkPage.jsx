@@ -120,6 +120,126 @@ const WorkPage = () => {
       image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHx3ZWIlMjBkZXNpZ258ZW58MHx8fHwxNzUzNDUzNTA5fDA&ixlib=rb-4.1.0&q=85',
       tags: ['Mobile', 'FinTech', 'Accessibility'],
       year: '2024'
+    },
+    {
+      id: 9,
+      title: 'Restaurant Brand Identity',
+      client: 'Artisan Kitchen',
+      category: 'Brand Identity',
+      description: 'Complete brand identity and interior design for upscale dining experience',
+      image: 'https://images.unsplash.com/photo-1567521464027-f127ff144326?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHw1fHxyZXN0YXVyYW50JTIwYnJhbmRpbmd8ZW58MHx8fHwxNzUzNDUzNTA5fDA&ixlib=rb-4.1.0&q=85',
+      tags: ['Restaurant', 'Interior', 'Hospitality'],
+      year: '2024'
+    },
+    {
+      id: 10,
+      title: 'Corporate Website Redesign',
+      client: 'Global Consulting',
+      category: 'Digital Design',
+      description: 'Modern website redesign with focus on professional service presentation',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHw2fHx3ZWJzaXRlJTIwZGVzaWdufGVufDB8fHx8MTc1MzQ1MzUwOXww&ixlib=rb-4.1.0&q=85',
+      tags: ['Corporate', 'Website', 'Professional'],
+      year: '2024'
+    },
+    {
+      id: 11,
+      title: 'Sustainable Product Packaging',
+      client: 'EcoTech Solutions',
+      category: 'Packaging',
+      description: 'Eco-friendly packaging design with biodegradable materials and minimal waste',
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHw3fHxlY28lMjBwYWNrYWdpbmd8ZW58MHx8fHwxNzUzNDUzNTA5fDA&ixlib=rb-4.1.0&q=85',
+      tags: ['Sustainable', 'Eco-friendly', 'Innovation'],
+      year: '2024'
+    },
+    {
+      id: 12,
+      title: 'Healthcare App Interface',
+      client: 'MedTech Innovations',
+      category: 'Digital Design',
+      description: 'Intuitive mobile app design for healthcare professionals and patients',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHw4fHxoZWFsdGhjYXJlJTIwYXBwfGVufDB8fHx8MTc1MzQ1MzUwOXww&ixlib=rb-4.1.0&q=85',
+      tags: ['Healthcare', 'Mobile', 'Medical'],
+      year: '2024'
+    },
+    {
+      id: 13,
+      title: 'Art Gallery Exhibition',
+      client: 'Modern Art Museum',
+      category: 'Brand Identity',
+      description: 'Visual identity and exhibition design for contemporary art showcase',
+      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHw5fHxhcnQlMjBnYWxsZXJ5fGVufDB8fHx8MTc1MzQ1MzUwOXww&ixlib=rb-4.1.0&q=85',
+      tags: ['Exhibition', 'Culture', 'Visual Arts'],
+      year: '2024'
+    },
+    {
+      id: 14,
+      title: 'Smart Home Platform',
+      client: 'IoT Solutions',
+      category: 'Digital Design',
+      description: 'Complete user experience design for smart home management system',
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxMHx8c21hcnQlMjBob21lfGVufDB8fHx8MTc1MzQ1MzUwOXww&ixlib=rb-4.1.0&q=85',
+      tags: ['IoT', 'Smart Home', 'Technology'],
+      year: '2024'
+    },
+    {
+      id: 15,
+      title: 'Fashion Brand Campaign',
+      client: 'Urban Style Co.',
+      category: 'Strategy',
+      description: 'Multi-channel brand campaign strategy for emerging fashion label',
+      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxMXx8ZmFzaGlvbiUyMGJyYW5kfGVufDB8fHx8MTc1MzQ1MzUwOXww&ixlib=rb-4.1.0&q=85',
+      tags: ['Fashion', 'Campaign', 'Multi-channel'],
+      year: '2024'
+    },
+    {
+      id: 16,
+      title: 'Educational Platform Design',
+      client: 'LearnTech Academy',
+      category: 'Digital Design',
+      description: 'Comprehensive e-learning platform with focus on user engagement',
+      image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxMnx8ZWR1Y2F0aW9uJTIwcGxhdGZvcm18ZW58MHx8fHwxNzUzNDUzNTA5fDA&ixlib=rb-4.1.0&q=85',
+      tags: ['Education', 'E-learning', 'Platform'],
+      year: '2024'
+    },
+    {
+      id: 17,
+      title: 'Wine Label Collection',
+      client: 'Vineyard Estates',
+      category: 'Packaging',
+      description: 'Premium wine label design series with artisanal typography and illustrations',
+      image: 'https://images.unsplash.com/photo-1574096079513-d8259312b785?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxM3x8d2luZSUyMGxhYmVsfGVufDB8fHx8MTc1MzQ1MzUwOXww&ixlib=rb-4.1.0&q=85',
+      tags: ['Wine', 'Artisanal', 'Typography'],
+      year: '2024'
+    },
+    {
+      id: 18,
+      title: 'Startup Pitch Deck',
+      client: 'TechVenture Inc.',
+      category: 'Strategy',
+      description: 'Compelling investor presentation design with data visualization and storytelling',
+      image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxNHx8cGl0Y2glMjBkZWNrfGVufDB8fHx8MTc1MzQ1MzUwOXww&ixlib=rb-4.1.0&q=85',
+      tags: ['Startup', 'Presentation', 'Investment'],
+      year: '2024'
+    },
+    {
+      id: 19,
+      title: 'Music Festival Branding',
+      client: 'Summer Beats Festival',
+      category: 'Brand Identity',
+      description: 'Complete festival identity including stage design, merchandise, and digital assets',
+      image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxNXx8bXVzaWMlMjBmZXN0aXZhbHxlbnwwfHx8fDE3NTM0NTM1MDl8MA&ixlib=rb-4.1.0&q=85',
+      tags: ['Music', 'Festival', 'Entertainment'],
+      year: '2024'
+    },
+    {
+      id: 20,
+      title: 'Banking App Redesign',
+      client: 'Future Bank',
+      category: 'Digital Design',
+      description: 'Modern banking app with enhanced security features and intuitive user flows',
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxNnx8YmFua2luZyUyMGFwcHxlbnwwfHx8fDE3NTM0NTM1MDl8MA&ixlib=rb-4.1.0&q=85',
+      tags: ['Banking', 'Security', 'Finance'],
+      year: '2024'
     }
   ];
 
