@@ -306,22 +306,24 @@ const WorkPage = () => {
                           </div>
 
                           {/* Project Info - Outside Card */}
-                          <div className="mt-6 space-y-3">
-                            {/* Client */}
-                            <p className="text-lg font-semibold text-black">
-                              {project.client}
-                            </p>
-                            
-                            {/* Tags */}
-                            <div className="flex flex-wrap gap-2">
-                              {project.tags.map((tag) => (
-                                <span
-                                  key={tag}
-                                  className="text-sm text-gray-700 font-medium"
-                                >
-                                  {tag}
-                                </span>
-                              ))}
+                          <div className="mt-6">
+                            <div className="flex justify-between items-start">
+                              {/* Client - Left */}
+                              <p className="text-lg font-semibold text-black">
+                                {project.client}
+                              </p>
+                              
+                              {/* Tags - Right */}
+                              <div className="flex flex-wrap gap-2 justify-end">
+                                {project.tags.map((tag) => (
+                                  <span
+                                    key={tag}
+                                    className="text-sm text-gray-700 font-medium"
+                                  >
+                                    {tag}
+                                  </span>
+                                ))}
+                              </div>
                             </div>
                           </div>
                         </div>
