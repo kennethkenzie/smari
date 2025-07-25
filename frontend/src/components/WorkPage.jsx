@@ -101,14 +101,14 @@ const WorkPage = () => {
         {/* Hero Section - Split Screen Layout */}
         <div className="flex flex-col lg:flex-row">
           {/* Left Side - Red (Fixed) */}
-          <div className="w-full lg:w-1/3 bg-metadesign-red fixed lg:fixed top-0 left-0 z-40 flex items-end justify-center pb-16 lg:pb-32 pt-32 lg:pt-0 h-[50vh] lg:h-screen">
+          <div className="w-full lg:w-1/6 bg-metadesign-red fixed lg:fixed top-0 left-0 z-40 flex items-end justify-center pb-16 lg:pb-32 pt-32 lg:pt-0 h-[50vh] lg:h-screen">
             <div className="text-white text-xl font-light tracking-wider transform lg:-rotate-90 origin-center">
               Work
             </div>
           </div>
 
           {/* Right Side - Dark Purple/Navy with Video */}
-          <div className="w-full lg:w-2/3 lg:ml-auto bg-gradient-to-br from-purple-900 to-indigo-900 relative flex items-center justify-center px-8 lg:px-16 py-16 lg:py-0 h-[50vh] lg:h-[70vh] mt-[50vh] lg:mt-0">
+          <div className="w-full lg:w-5/6 lg:ml-auto bg-gradient-to-br from-purple-900 to-indigo-900 relative flex items-center justify-center px-8 lg:px-16 py-16 lg:py-0 h-[50vh] lg:h-[70vh] mt-[50vh] lg:mt-0">
             {/* Background Video */}
             <video
               autoPlay
