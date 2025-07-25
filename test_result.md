@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Fix the video carousel overlay issue where the background wasn't loading properly and ensure the video carousel functions correctly as a full overlay covering the entire right section of the homepage. The previous implementation had the video carousel wrapped in ScrollAnimations which prevented proper display."
+user_problem_statement: "Complete frontend testing for the Smari Creatives application. The video carousel overlay issue has been resolved and now all UI/UX features need comprehensive testing including split-screen layout, custom cursor, typewriter effects, scroll animations, page transitions, video carousel functionality, navigation, and footer organization."
 
 backend:
   - task: "Basic Server Health"
