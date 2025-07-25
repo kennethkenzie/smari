@@ -4,10 +4,6 @@ import PageTransition from './PageTransition';
 import ScrollAnimations from './ScrollAnimations';
 
 const WorkPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-
-  const categories = ['All', 'Brand Identity', 'Digital Design', 'Strategy', 'Packaging'];
-
   const projects = [
     {
       id: 1,
