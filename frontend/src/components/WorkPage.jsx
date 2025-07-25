@@ -368,6 +368,26 @@ const WorkPage = () => {
                             </div>
                           </div>
                         </div>
+
+                        {/* Project Info - Outside Card */}
+                        <div className="mt-6 space-y-3">
+                          {/* Client */}
+                          <p className="text-lg font-semibold text-black">
+                            {projects[3 + groupIndex * 3].client}
+                          </p>
+                          
+                          {/* Tags */}
+                          <div className="flex flex-wrap gap-2">
+                            {projects[3 + groupIndex * 3].tags.map((tag) => (
+                              <span
+                                key={tag}
+                                className="text-sm text-gray-700 font-medium"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </ScrollAnimations>
                   )}
