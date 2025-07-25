@@ -96,9 +96,6 @@ const Footer = () => {
               <Link to="/careers" className="text-white text-lg font-light hover:opacity-70 transition-opacity duration-300">
                 Careers
               </Link>
-              <Link to="/careers" className="text-white text-lg font-light hover:opacity-70 transition-opacity duration-300">
-                Join Our Team
-              </Link>
             </div>
 
             {/* Social Media Links */}
