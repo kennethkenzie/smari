@@ -232,7 +232,7 @@ const WorkPage = () => {
                   </div>
 
                   {/* Project Info - Outside Card */}
-                  <div className="mt-6">
+                  <div className="mt-8">
                     <div className="flex justify-between items-start">
                       {/* Client - Left */}
                       <p className="text-2xl font-semibold text-black">
