@@ -202,10 +202,10 @@ const WorkPage = () => {
               {/* First Project Card - Large Size */}
               <ScrollAnimations delay={0}>
                 <div className="group cursor-pointer" data-cursor="red">
-                  {/* First Project Image - 2560x1440 Rotated */}
+                  {/* First Project Image - 1280x720 Rotated (Half Size) */}
                   <div 
                     className="relative overflow-hidden rounded-lg bg-gray-100 mx-auto transform rotate-90"
-                    style={{ width: '1440px', height: '2560px', maxWidth: '100%' }}
+                    style={{ width: '720px', height: '1280px', maxWidth: '100%' }}
                   >
                     <img
                       src={projects[0].image}
