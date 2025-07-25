@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageTransition from './PageTransition';
 import ScrollAnimations from './ScrollAnimations';
+import './WorkPage.css';
 
 const WorkPage = () => {
   const projects = [
