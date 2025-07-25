@@ -5,6 +5,41 @@ import ScrollAnimations from './ScrollAnimations';
 import './WorkPage.css';
 
 const WorkPage = () => {
+  useEffect(() => {
+    // Update sidebar height to match page content height
+    const updateSidebarHeight = () => {
+      const pageHeight = Math.max(
+        document.body.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.clientHeight,
+        document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight
+      );
+      
+      const sidebar = document.querySelector('.red-sidebar-full-height');
+      if (sidebar) {
+        sidebar.style.setProperty('--page-height', pageHeight + 'px');
+        sidebar.style.height = pageHeight + 'px';
+      }
+    };
+
+    // Update on mount and resize
+    updateSidebarHeight();
+    window.addEventListener('resize', updateSidebarHeight);
+    
+    // Use MutationObserver to detect content changes
+    const observer = new MutationObserver(updateSidebarHeight);
+    observer.observe(document.body, { 
+      childList: true, 
+      subtree: true 
+    });
+
+    return () => {
+      window.removeEventListener('resize', updateSidebarHeight);
+      observer.disconnect();
+    };
+  }, []);
+
   const projects = [
     {
       id: 1,
