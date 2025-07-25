@@ -177,6 +177,18 @@ backend:
         agent: "testing"
         comment: "TESTED SUCCESSFULLY - Backend is running on correct port configuration with supervisor. API routes are properly prefixed with '/api' for Kubernetes ingress. Root endpoint serves frontend React app (correct behavior), while /api endpoints serve backend API."
 
+  - task: "Footer Organization and Links"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/Footer.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "UPDATED - Removed duplicate 'Join Our Team' link that was pointing to same /careers route. Improved legal section spacing for better alignment on different screen sizes. Footer links are now properly organized without duplicates."
+
 frontend:
   - task: "Video Carousel Full Overlay"
     implemented: true
