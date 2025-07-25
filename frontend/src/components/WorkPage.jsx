@@ -255,13 +255,13 @@ const WorkPage = () => {
                 </div>
               </ScrollAnimations>
 
-              {/* Alternating Pattern: 2 Medium Cards, then 1 Large Landscape Card */}
-              {Array.from({ length: Math.ceil((projects.length - 1) / 3) }, (_, groupIndex) => (
+              {/* Alternating Pattern: 3 Medium Cards, then 1 Large Landscape Card */}
+              {Array.from({ length: Math.ceil((projects.length - 1) / 4) }, (_, groupIndex) => (
                 <div key={groupIndex} className="space-y-16">
-                  {/* Two Medium Cards */}
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
-                    {projects.slice(1 + groupIndex * 3, 3 + groupIndex * 3).map((project, index) => (
-                      <ScrollAnimations key={project.id} delay={(index + 1 + groupIndex * 3) * 100}>
+                  {/* Three Medium Cards */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
+                    {projects.slice(1 + groupIndex * 4, 4 + groupIndex * 4).map((project, index) => (
+                      <ScrollAnimations key={project.id} delay={(index + 1 + groupIndex * 4) * 100}>
                         <div className="group cursor-pointer" data-cursor="red">
                           {/* Project Image */}
                           <div className="relative aspect-[4/3] mb-8 overflow-hidden rounded-lg bg-gray-100 transform scale-125">
@@ -282,7 +282,7 @@ const WorkPage = () => {
                           </div>
 
                           {/* Project Info - Outside Card */}
-                          <div className="mt-6">
+                          <div className="mt-8">
                             <div className="flex justify-between items-start">
                               {/* Client - Left */}
                               <p className="text-2xl font-semibold text-black">
@@ -308,8 +308,8 @@ const WorkPage = () => {
                   </div>
 
                   {/* Large Landscape Card (if more projects available) */}
-                  {projects[3 + groupIndex * 3] && (
-                    <ScrollAnimations delay={(3 + groupIndex * 3) * 100}>
+                  {projects[4 + groupIndex * 4] && (
+                    <ScrollAnimations delay={(4 + groupIndex * 4) * 100}>
                       <div className="group cursor-pointer" data-cursor="red">
                         {/* Large Landscape Project Image */}
                         <div 
@@ -322,8 +322,8 @@ const WorkPage = () => {
                           }}
                         >
                           <img
-                            src={projects[3 + groupIndex * 3].image}
-                            alt={projects[3 + groupIndex * 3].title}
+                            src={projects[4 + groupIndex * 4].image}
+                            alt={projects[4 + groupIndex * 4].title}
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                             loading="lazy"
                           />
@@ -338,16 +338,16 @@ const WorkPage = () => {
                         </div>
 
                         {/* Project Info - Outside Card */}
-                        <div className="mt-6">
+                        <div className="mt-8">
                           <div className="flex justify-between items-start">
                             {/* Client - Left */}
                             <p className="text-2xl font-semibold text-black">
-                              {projects[3 + groupIndex * 3].client}
+                              {projects[4 + groupIndex * 4].client}
                             </p>
                             
                             {/* Tags - Right */}
                             <div className="flex flex-wrap gap-2 justify-end">
-                              {projects[3 + groupIndex * 3].tags.map((tag) => (
+                              {projects[4 + groupIndex * 4].tags.map((tag) => (
                                 <span
                                   key={tag}
                                   className="text-lg text-gray-700 font-medium"
