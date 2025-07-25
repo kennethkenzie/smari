@@ -259,12 +259,12 @@ const WorkPage = () => {
               {Array.from({ length: Math.ceil((projects.length - 1) / 4) }, (_, groupIndex) => (
                 <div key={groupIndex} className="space-y-16">
                   {/* Three Medium Cards */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-20">
                     {projects.slice(1 + groupIndex * 4, 4 + groupIndex * 4).map((project, index) => (
                       <ScrollAnimations key={project.id} delay={(index + 1 + groupIndex * 4) * 100}>
                         <div className="group cursor-pointer" data-cursor="red">
                           {/* Project Image */}
-                          <div className="relative aspect-[4/3] mb-8 overflow-hidden rounded-lg bg-gray-100 transform scale-125">
+                          <div className="relative aspect-[4/3] mb-12 overflow-hidden rounded-lg bg-gray-100 transform scale-125">
                             <img
                               src={project.image}
                               alt={project.title}
@@ -282,10 +282,10 @@ const WorkPage = () => {
                           </div>
 
                           {/* Project Info - Outside Card */}
-                          <div className="mt-8">
-                            <div className="flex justify-between items-start">
+                          <div className="mt-4 px-2">
+                            <div className="flex justify-between items-start flex-wrap gap-2">
                               {/* Client - Left */}
-                              <p className="text-2xl font-semibold text-black">
+                              <p className="text-2xl font-semibold text-black flex-shrink-0">
                                 {project.client}
                               </p>
                               
