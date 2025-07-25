@@ -99,25 +99,39 @@ const WorkPage = () => {
     <PageTransition>
       <div className="min-h-screen bg-white">
         {/* Hero Section - Split Screen Layout */}
-        <div className="flex flex-col lg:flex-row min-h-screen">
-          {/* Left Side - Red */}
-          <div className="w-full lg:w-1/4 bg-metadesign-red relative flex items-end justify-center pb-16 lg:pb-32 pt-32 lg:pt-0 min-h-[50vh] lg:min-h-screen">
+        <div className="flex flex-col lg:flex-row">
+          {/* Left Side - Red (Fixed) */}
+          <div className="w-full lg:w-1/3 bg-metadesign-red fixed lg:fixed top-0 left-0 z-40 flex items-end justify-center pb-16 lg:pb-32 pt-32 lg:pt-0 h-[50vh] lg:h-screen">
             <div className="text-white text-xl font-light tracking-wider transform lg:-rotate-90 origin-center">
               Work
             </div>
           </div>
 
-          {/* Right Side - Dark Purple/Navy */}
-          <div className="w-full lg:w-3/4 bg-gradient-to-br from-purple-900 to-indigo-900 relative flex items-center justify-center px-8 lg:px-16 py-16 lg:py-0 min-h-[50vh] lg:min-h-screen">
+          {/* Right Side - Dark Purple/Navy with Video */}
+          <div className="w-full lg:w-2/3 lg:ml-auto bg-gradient-to-br from-purple-900 to-indigo-900 relative flex items-center justify-center px-8 lg:px-16 py-16 lg:py-0 h-[50vh] lg:h-[70vh] mt-[50vh] lg:mt-0">
+            {/* Background Video */}
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover z-0"
+            >
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+            </video>
+            
+            {/* Video Overlay */}
+            <div className="absolute inset-0 bg-purple-900/70 z-10"></div>
+            
             {/* Background Text */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-10">
+            <div className="absolute inset-0 flex items-center justify-center opacity-10 z-20">
               <div className="text-white text-6xl lg:text-9xl font-bold tracking-wider">
                 smari
               </div>
             </div>
             
             {/* Main Content */}
-            <div className="relative z-10 text-white max-w-lg">
+            <div className="relative z-30 text-white max-w-lg">
               <ScrollAnimations>
                 <h1 className="text-3xl lg:text-5xl xl:text-6xl font-light leading-tight mb-6 lg:mb-8">
                   Creativity with the power to transform
