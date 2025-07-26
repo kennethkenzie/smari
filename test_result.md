@@ -222,6 +222,9 @@ frontend:
       - working: "NA"
         agent: "main"
         comment: "IMPLEMENTED - Created new ProjectDetailPage component that replicates the Cencora page structure with hero section, project meta, detailed content sections, image galleries, quotes, awards section, and related projects. Added routing support for /work/:projectId URLs in App.js. Made all project cards in WorkPage clickable with Link components to navigate to individual project detail pages. Ready for backend testing to ensure no regressions."
+      - working: "NA"
+        agent: "main"
+        comment: "UPDATED - Completely restructured ProjectDetailPage to match exact Cencora layout with full-width video header, left sidebar with project details (sector, services), main content area with large title and subtitle. Added close button (X) in header. Updated video URL to use client-provided video: https://ik.imagekit.io/67mog36hf/smari%20creatives/POR_CD_23_Video_2_short.mp4. Ready for testing."
 
   - task: "Work Page Click Navigation"
     implemented: true
