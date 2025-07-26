@@ -83,14 +83,14 @@ const ProjectDetailPage = () => {
           
           {/* Header Content */}
           <div className="relative z-10 flex items-center justify-between px-8 py-6 h-full">
-            <div className="flex items-center">
-              <h1 className="text-white text-3xl font-light">{project.client}</h1>
+            <div className="flex items-center text-left">
+              <h1 className="text-white text-4xl font-bold">{project.client}</h1>
             </div>
             <Link 
               to="/work"
               className="text-white hover:text-gray-300 transition-colors"
             >
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </Link>
