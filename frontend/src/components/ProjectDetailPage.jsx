@@ -207,8 +207,8 @@ const ProjectDetailPage = () => {
                 
                 {/* Quote Section */}
                 <ScrollAnimations>
-                  <div className="bg-gray-50 p-8 rounded-lg">
-                    <blockquote className="text-2xl font-light text-gray-900 italic">
+                  <div className="bg-gray-50 p-12 rounded-lg text-left">
+                    <blockquote className="text-3xl font-bold text-gray-900 text-left leading-relaxed">
                       "The refreshed brand embodies innovation and stands apart in the specialty coffee industry. Each brand element—type, color, imagery, and graphics—brings to life the energy of a brand on its quest for the perfect cup."
                     </blockquote>
                   </div>
@@ -219,23 +219,23 @@ const ProjectDetailPage = () => {
         </div>
 
         {/* Awards Section */}
-        <div className="bg-gray-50 py-16">
+        <div className="bg-gray-50 py-20">
           <div className="max-w-6xl mx-auto px-8">
-            <h2 className="text-3xl font-light text-gray-900 mb-12">Awards</h2>
+            <h2 className="text-5xl font-bold text-gray-900 mb-16 text-left">Awards</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-6 rounded-lg">
-                <h3 className="text-xl font-medium text-gray-900 mb-2">
+              <div className="bg-white p-8 rounded-lg text-left">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Brand Impact Awards 2024
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-lg text-gray-600">
                   Best Brand Development (Food & Beverage)
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-lg">
-                <h3 className="text-xl font-medium text-gray-900 mb-2">
+              <div className="bg-white p-8 rounded-lg text-left">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Design Excellence Awards 2024
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-lg text-gray-600">
                   Best Implementation of a Brand Development Project
                 </p>
               </div>
@@ -244,35 +244,34 @@ const ProjectDetailPage = () => {
         </div>
 
         {/* Contact Section */}
-        <div className="bg-black text-white py-16">
+        <div className="bg-black text-white py-20">
           <div className="max-w-6xl mx-auto px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-              <div>
-                <h3 className="text-2xl font-light mb-4">Need more details?</h3>
-                <div className="space-y-2">
-                  <p className="text-lg">Creative Director</p>
-                  <p className="text-gray-300">Smari Creatives</p>
-                  <div className="mt-4 space-y-1">
-                    <a href="mailto:hello@smaricreatives.com" className="text-red-400 hover:text-red-300 transition-colors">
+              <div className="text-left">
+                <h3 className="text-3xl font-bold mb-6">Need more details?</h3>
+                <div className="space-y-4">
+                  <p className="text-xl">Creative Director</p>
+                  <p className="text-lg text-gray-300">Smari Creatives</p>
+                  <div className="mt-6 space-y-2">
+                    <a href="mailto:hello@smaricreatives.com" className="text-xl text-red-400 hover:text-red-300 transition-colors block">
                       hello@smaricreatives.com
                     </a>
-                    <br />
-                    <a href="tel:+1-555-123-4567" className="text-red-400 hover:text-red-300 transition-colors">
+                    <a href="tel:+1-555-123-4567" className="text-xl text-red-400 hover:text-red-300 transition-colors block">
                       +1 555 123 4567
                     </a>
                   </div>
                 </div>
               </div>
               
-              <div>
-                <h3 className="text-2xl font-light mb-8">Related work</h3>
-                <div className="space-y-6">
+              <div className="text-left">
+                <h3 className="text-3xl font-bold mb-10">Related work</h3>
+                <div className="space-y-8">
                   <Link 
                     to="/work/2"
                     className="block group"
                   >
-                    <div className="flex items-center space-x-4 hover:opacity-80 transition-opacity">
-                      <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                    <div className="flex items-center space-x-6 hover:opacity-80 transition-opacity">
+                      <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
                         <img 
                           src="https://images.unsplash.com/photo-1614036634955-ae5e90f9b9eb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxicmFuZCUyMGlkZW50aXR5fGVufDB8fHx8MTc1MzQ1MzUwMnww&ixlib=rb-4.1.0&q=85"
                           alt="Creative Magazine"
@@ -280,10 +279,10 @@ const ProjectDetailPage = () => {
                         />
                       </div>
                       <div>
-                        <h4 className="text-lg font-medium text-white group-hover:text-red-400 transition-colors">
+                        <h4 className="text-2xl font-bold text-white group-hover:text-red-400 transition-colors">
                           Creative Magazine
                         </h4>
-                        <p className="text-gray-400 text-sm">
+                        <p className="text-lg text-gray-400">
                           Brand Identity
                         </p>
                       </div>
@@ -294,8 +293,8 @@ const ProjectDetailPage = () => {
                     to="/work/3"
                     className="block group"
                   >
-                    <div className="flex items-center space-x-4 hover:opacity-80 transition-opacity">
-                      <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                    <div className="flex items-center space-x-6 hover:opacity-80 transition-opacity">
+                      <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
                         <img 
                           src="https://images.unsplash.com/photo-1559028012-481c04fa702d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwyfHx3ZWIlMjBkZXNpZ258ZW58MHx8fHwxNzUzNDUzNTA5fDA&ixlib=rb-4.1.0&q=85"
                           alt="Tech Startup"
@@ -303,10 +302,10 @@ const ProjectDetailPage = () => {
                         />
                       </div>
                       <div>
-                        <h4 className="text-lg font-medium text-white group-hover:text-red-400 transition-colors">
+                        <h4 className="text-2xl font-bold text-white group-hover:text-red-400 transition-colors">
                           Tech Startup
                         </h4>
-                        <p className="text-gray-400 text-sm">
+                        <p className="text-lg text-gray-400">
                           Digital Design
                         </p>
                       </div>
@@ -316,7 +315,7 @@ const ProjectDetailPage = () => {
                 
                 <Link 
                   to="/work"
-                  className="inline-block mt-8 text-red-400 hover:text-red-300 transition-colors"
+                  className="inline-block mt-10 text-xl text-red-400 hover:text-red-300 transition-colors font-bold"
                 >
                   See all projects
                 </Link>
