@@ -130,31 +130,31 @@ const ProjectDetailPage = () => {
 
           {/* Main Content Area */}
           <div className="flex-1 p-8">
-            <div className="max-w-4xl">
+            <div className="max-w-4xl text-left">
               {/* Project Title */}
-              <h1 className="text-6xl font-light text-gray-900 mb-4">
+              <h1 className="text-8xl font-bold text-gray-900 mb-6 text-left">
                 {project.client}
               </h1>
               
               {/* Subtitle */}
-              <h2 className="text-3xl font-light text-gray-900 mb-12">
+              <h2 className="text-5xl font-bold text-gray-900 mb-16 text-left">
                 {project.subtitle}
               </h2>
               
               {/* Main Description */}
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+              <div className="space-y-8 text-2xl text-gray-700 leading-relaxed text-left">
                 <p>{project.heroDescription}</p>
                 <p>{project.mainContent}</p>
               </div>
               
               {/* Additional Content Sections */}
-              <div className="mt-16 space-y-12">
+              <div className="mt-20 space-y-16">
                 <ScrollAnimations>
                   <div>
-                    <h3 className="text-2xl font-light text-gray-900 mb-6">
+                    <h3 className="text-4xl font-bold text-gray-900 mb-8 text-left">
                       Transformative Strategy
                     </h3>
-                    <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
+                    <div className="space-y-6 text-xl text-gray-700 leading-relaxed text-left">
                       <p>
                         The transformation of {project.client}'s brand was guided by a clear vision: to simplify its complex product structure and reflect its leadership in specialty coffee innovation. Our strategic approach focused on aligning the brand's visual and verbal identity with its purpose, while clarifying its structure to ensure a cohesive and unified presence.
                       </p>
@@ -167,10 +167,10 @@ const ProjectDetailPage = () => {
                 
                 <ScrollAnimations>
                   <div>
-                    <h3 className="text-2xl font-light text-gray-900 mb-6">
+                    <h3 className="text-4xl font-bold text-gray-900 mb-8 text-left">
                       Transformative Branding
                     </h3>
-                    <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
+                    <div className="space-y-6 text-xl text-gray-700 leading-relaxed text-left">
                       <p>
                         The new {project.client} brand is a vibrant, modular system that reflects the company's inspiring purpose and ambition. Central to the design is the wordmark, which prioritizes simplicity and clarity while projecting confidence and approachability. The distinctive Coffee Brown color is a trustworthy tone, and anchors a dynamic palette of warm colors, complemented by dynamic gradients that convey a sense of craftsmanship and warmth.
                       </p>
