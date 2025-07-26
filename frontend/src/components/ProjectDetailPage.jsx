@@ -101,25 +101,25 @@ const ProjectDetailPage = () => {
         <div className="flex">
           {/* Left Sidebar */}
           <div className="w-1/4 bg-white p-8 border-r border-gray-200">
-            <div className="space-y-8">
+            <div className="space-y-8 text-left">
               {/* Sector */}
               <div>
-                <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-2">
+                <h3 className="text-lg font-bold text-gray-400 uppercase tracking-wider mb-4">
                   Sector
                 </h3>
-                <p className="text-gray-900 text-lg">
+                <p className="text-gray-900 text-2xl font-semibold">
                   {project.sector}
                 </p>
               </div>
               
               {/* Services */}
               <div>
-                <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-4">
+                <h3 className="text-lg font-bold text-gray-400 uppercase tracking-wider mb-6">
                   Services
                 </h3>
-                <div className="space-y-2">
+                <div className="space-y-3">
                   {project.services.map((service, index) => (
-                    <p key={index} className="text-gray-900 text-sm leading-relaxed">
+                    <p key={index} className="text-gray-900 text-lg leading-relaxed">
                       {service}
                     </p>
                   ))}
