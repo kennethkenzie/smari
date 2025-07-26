@@ -20,7 +20,7 @@ const ProjectDetailPage = () => {
       tags: ['Branding', 'Identity', 'Packaging'],
       
       // Video for header
-      video: 'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1c9a20c8e&profile_id=165&oauth2_token_id=57447761',
+      video: 'https://ik.imagekit.io/67mog36hf/smari%20creatives/POR_CD_23_Video_2_short.mp4?updatedAt=1753469409835',
       
       // Project details for sidebar
       sector: 'Coffee & Beverage',
