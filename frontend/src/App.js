@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import CustomCursor from "./components/CustomCursor";
 import PageTransition from "./components/PageTransition";
 import WorkPage from "./components/WorkPage";
+import ProjectDetailPage from "./components/ProjectDetailPage";
 
 // Enhanced placeholder components with better animations
 const About = () => (
