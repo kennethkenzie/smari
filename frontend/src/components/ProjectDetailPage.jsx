@@ -66,7 +66,7 @@ const ProjectDetailPage = () => {
     <PageTransition>
       <div className="min-h-screen bg-white">
         {/* Full-Width Video Header */}
-        <div className="relative w-full h-96 overflow-hidden">
+        <div className="relative w-full h-[600px] overflow-hidden">
           <video 
             className="absolute inset-0 w-full h-full object-cover"
             autoPlay
