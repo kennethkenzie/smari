@@ -131,6 +131,9 @@ backend:
       - working: true
         agent: "testing"
         comment: "TESTED SUCCESSFULLY - API responses return proper JSON format with correct status codes (200). Content-Type header is correctly set to application/json."
+      - working: true
+        agent: "testing"
+        comment: "RE-VERIFIED SUCCESSFULLY AFTER FRONTEND CHANGES - API response format remains perfect. All endpoints return proper JSON format with correct status codes (200). Content-Type header correctly set to application/json. No regressions from frontend routing changes."
 
   - task: "CORS Configuration"
     implemented: true
