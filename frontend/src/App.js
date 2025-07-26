@@ -125,6 +125,7 @@ function App() {
           <Route path="/" element={<EnhancedHomepage />} />
           <Route path="/about" element={<About />} />
           <Route path="/work" element={<Work />} />
+          <Route path="/work/:projectId" element={<ProjectDetailPage />} />
           <Route path="/offices" element={<Offices />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
