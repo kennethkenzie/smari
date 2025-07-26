@@ -374,48 +374,50 @@ const WorkPage = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 lg:gap-32 py-12">
                 {/* First Half of Original Large Card */}
                 <ScrollAnimations delay={100}>
-                  <div className="group cursor-pointer py-8" data-cursor="red">
-                    <div 
-                      className="relative overflow-hidden rounded-lg bg-gray-100 mx-auto"
-                      style={{ 
-                        width: '100%', 
-                        maxWidth: '700px',
-                        height: '600px',
-                        aspectRatio: '7/6'
-                      }}
-                    >
-                      <img
-                        src={projects[1].image}
-                        alt={projects[1].title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
-                      
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                        <div className="bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full text-black font-medium text-lg">
-                          View Case Study
+                  <Link to={`/work/${projects[1].id}`}>
+                    <div className="group cursor-pointer py-8" data-cursor="red">
+                      <div 
+                        className="relative overflow-hidden rounded-lg bg-gray-100 mx-auto"
+                        style={{ 
+                          width: '100%', 
+                          maxWidth: '700px',
+                          height: '600px',
+                          aspectRatio: '7/6'
+                        }}
+                      >
+                        <img
+                          src={projects[1].image}
+                          alt={projects[1].title}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
+                        
+                        {/* Hover Overlay */}
+                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                          <div className="bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full text-black font-medium text-lg">
+                            View Case Study
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Project Info - Outside Card */}
-                    <div className="mt-8 px-4">
-                      <div className="flex justify-between items-start">
-                        <p className="text-2xl font-semibold text-black">
-                          {projects[1].client}
-                        </p>
-                        <div className="flex flex-wrap gap-2 justify-end">
-                          {projects[1].tags.map((tag) => (
-                            <span key={tag} className="text-lg text-gray-700 font-medium">
-                              {tag}
-                            </span>
-                          ))}
+                      {/* Project Info - Outside Card */}
+                      <div className="mt-8 px-4">
+                        <div className="flex justify-between items-start">
+                          <p className="text-2xl font-semibold text-black">
+                            {projects[1].client}
+                          </p>
+                          <div className="flex flex-wrap gap-2 justify-end">
+                            {projects[1].tags.map((tag) => (
+                              <span key={tag} className="text-lg text-gray-700 font-medium">
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </ScrollAnimations>
 
                 {/* Second Half of Original Large Card */}
